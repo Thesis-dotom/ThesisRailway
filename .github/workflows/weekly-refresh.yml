@@ -1,0 +1,74 @@
+name: Weekly company refresh
+on:
+  schedule:
+    - cron: '17 23 * * 0'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: weekly-recommendations
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: thesis_test
+          POSTGRES_USER: thesis_test
+          POSTGRES_PASSWORD: temporary-ci-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U thesis_test -d thesis_test"
+          --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.lock pytest
+      - name: Test calculations, routes and persistent inbox
+        run: python -m pytest -q
+        env:
+          DATABASE_TEST_URL: postgresql://thesis_test:temporary-ci-password@localhost:5432/thesis_test
+      - name: Fetch and validate company data
+        run: python refresh_recommendations.py
+      - name: Save refresh diagnostics
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-diagnostics-${{ github.run_id }}
+          path: .refresh-work/*.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Summarize refresh
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('.refresh-work/refresh-status.json')
+          if path.exists():
+              status = json.loads(path.read_text())
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+                  summary.write('## Thesis data refresh\n\n')
+                  for key in ['state', 'fetched_count', 'raw_complete_count', 'complete_count', 'universe_count',
+                              'recommendation_count', 'snapshot_id', 'finished_at', 'reason']:
+                      if key in status:
+                          summary.write(f"- {key}: {status[key]}\n")
+                  summary.write('\nPublication still requires the commit/push step and Render deployment.\n')
+          PY
+      - name: Publish snapshot to deployment branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/recommendations.json data/history/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh weekly company research"
+          git push
