@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A practical framework for evaluating businesses, opportunities, valuation, and risk." />
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml" />
+  <title>How to Invest | Thesis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  {% include 'partials/nav.html' %}
+
+  <main>
+    <section class="learn-hero">
+      <div>
+        <p class="eyebrow">Investor education</p>
+        <h1>How to Invest</h1>
+        <p class="big">
+          A practical framework for choosing stronger companies, managing risk, and knowing why you own a stock.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="learn-layout">
+        <aside class="learn-sidebar">
+          <h3>On this page</h3>
+          <a href="#process">Investment Process</a>
+          <a href="#quality">Business Quality</a>
+          <a href="#opportunity">Opportunity</a>
+          <a href="#risk">Risk Management</a>
+          <a href="#buy-sell">When to Buy or Sell</a>
+          <a href="#terms">Terms Glossary</a>
+          <a href="#final-rule">Final Rule</a>
+        </aside>
+
+        <article class="learn-content">
+          <section id="process" class="learn-section">
+            <span class="section-number">01</span>
+            <h2>Start With the Business, Not the Stock Price</h2>
+            <p>
+              A stock is not just a line moving up and down on a chart. A stock represents ownership in a business.
+              Before buying, the first question should be simple:
+            </p>
+            <div class="principle-box">
+              Does this company deserve to be owned?
+            </div>
+            <p>
+              A falling stock price does not automatically make something cheap, and a rising stock price does not automatically make something good.
+              The business comes first. The stock price comes second.
+            </p>
+          </section>
+
+          <section id="quality" class="learn-section">
+            <span class="section-number">02</span>
+            <h2>Look for Business Quality</h2>
+            <p>
+              Strong companies usually have the financial power to survive weak markets and benefit when conditions improve.
+              Business quality is about how strong the company itself is.
+            </p>
+
+            <div class="concept-grid">
+              <div>
+                <h3>Revenue Growth</h3>
+                <p>Is the company selling more over time?</p>
+              </div>
+              <div>
+                <h3>Profit Growth</h3>
+                <p>Is the company turning sales into higher earnings?</p>
+              </div>
+              <div>
+                <h3>Margins</h3>
+                <p>Does the company keep a healthy amount of profit from each dollar of revenue?</p>
+              </div>
+              <div>
+                <h3>Free Cash Flow</h3>
+                <p>Does the business generate real cash after paying for operations and major investments?</p>
+              </div>
+              <div>
+                <h3>Debt</h3>
+                <p>Can the company handle what it owes?</p>
+              </div>
+              <div>
+                <h3>Competitive Position</h3>
+                <p>Does the company have advantages that competitors cannot easily copy?</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="opportunity" class="learn-section">
+            <span class="section-number">03</span>
+            <h2>Look for Opportunity</h2>
+            <p>
+              A great company is not always a great investment. If the price is too high, the future upside may already be priced in.
+              A weaker company is not automatically bad either, especially if a turnaround is realistic.
+            </p>
+            <p>
+              The strongest setups usually combine a good business with a clear reason the stock could become more valuable.
+            </p>
+
+            <h3>Common sources of opportunity</h3>
+            <ul class="clean-list">
+              <li>Industry tailwinds, such as AI, cloud infrastructure, defense spending, energy demand, or manufacturing expansion.</li>
+              <li>Company-specific catalysts, such as new products, margin improvement, restructuring, or major contracts.</li>
+              <li>Market misunderstanding, where investors may be underestimating the company’s future earnings power.</li>
+              <li>Reasonable valuation, where the stock price still leaves room for upside.</li>
+              <li>Improving financial results, especially when revenue, margins, and cash flow move in the right direction together.</li>
+            </ul>
+          </section>
+
+          <section class="learn-section">
+            <span class="section-number">04</span>
+            <h2>Know Why the Stock Could Rise</h2>
+            <p>
+              Before buying a stock, you should be able to explain what could make the company more valuable.
+            </p>
+
+            <div class="comparison-grid">
+              <div class="bad-example">
+                <h3>Weak reason</h3>
+                <p>“I think it will go up.”</p>
+              </div>
+              <div class="good-example">
+                <h3>Better reason</h3>
+                <p>
+                  “Revenue is growing, margins are improving, demand is rising, and the market may be undervaluing the company.”
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="risk" class="learn-section">
+            <span class="section-number">05</span>
+            <h2>Manage Risk Before Buying</h2>
+            <p>
+              Risk management is not something to think about after the stock drops. It should be part of the decision before buying.
+            </p>
+
+            <div class="rule-list">
+              <div><strong>Do not buy just because of hype.</strong><span>Popularity is not the same as quality.</span></div>
+              <div><strong>Know the biggest risk.</strong><span>Every investment has something that could go wrong.</span></div>
+              <div><strong>Watch debt.</strong><span>High debt can turn a normal slowdown into a serious problem.</span></div>
+              <div><strong>Respect valuation.</strong><span>A great company can still be a bad investment if the price is too high.</span></div>
+              <div><strong>Diversify.</strong><span>Do not let one stock control your entire outcome.</span></div>
+              <div><strong>Know what would change your mind.</strong><span>If the facts change, the thesis should change too.</span></div>
+            </div>
+          </section>
+
+          <section id="buy-sell" class="learn-section">
+            <span class="section-number">06</span>
+            <h2>Know When to Buy or Sell</h2>
+
+            <h3>When buying makes more sense</h3>
+            <p>
+              Buying makes more sense when the business case is strong, the opportunity is clear, and the price still leaves room for upside.
+            </p>
+            <ul class="clean-list">
+              <li>The company has solid or improving fundamentals.</li>
+              <li>There is a clear catalyst or long-term tailwind.</li>
+              <li>The valuation is reasonable compared with the company’s future potential.</li>
+              <li>The risks are understood, not ignored.</li>
+              <li>You can clearly explain why you own it.</li>
+            </ul>
+
+            <h3>When selling makes more sense</h3>
+            <ul class="clean-list">
+              <li>The original thesis breaks.</li>
+              <li>Growth slows in a way that changes the long-term story.</li>
+              <li>Margins weaken and do not recover.</li>
+              <li>Debt becomes dangerous.</li>
+              <li>The stock becomes extremely overvalued.</li>
+              <li>A better opportunity exists elsewhere.</li>
+              <li>You no longer understand why you own it.</li>
+            </ul>
+          </section>
+
+          <section id="terms" class="learn-section">
+            <span class="section-number">07</span>
+            <h2>Terms Glossary</h2>
+            <p>
+              These are the terms investors should understand before reading a company report or making a decision.
+            </p>
+
+            <div class="glossary-group">
+              <h3>Basic investing terms</h3>
+              <div class="glossary-grid">
+                <div><strong>Stock</strong><p>Ownership in a company. If the company becomes more valuable, the stock may rise. If the company weakens, the stock may fall.</p></div>
+                <div><strong>Share</strong><p>One unit of ownership in a company.</p></div>
+                <div><strong>Ticker</strong><p>The short symbol used to identify a stock, such as AAPL for Apple or NVDA for Nvidia.</p></div>
+                <div><strong>Bond</strong><p>A loan made to a company or government. Bond investors usually receive interest payments and expect repayment at maturity.</p></div>
+                <div><strong>ETF</strong><p>An exchange-traded fund. It holds a basket of investments and trades like a stock.</p></div>
+                <div><strong>Index Fund</strong><p>A fund designed to track a market index, such as the S&amp;P 500.</p></div>
+                <div><strong>Portfolio</strong><p>The full collection of investments someone owns.</p></div>
+                <div><strong>Diversification</strong><p>Spreading money across different investments to reduce dependence on one company or sector.</p></div>
+              </div>
+            </div>
+
+            <div class="glossary-group">
+              <h3>Company and financial terms</h3>
+              <div class="glossary-grid">
+                <div><strong>Revenue</strong><p>The money a company brings in from selling products or services.</p></div>
+                <div><strong>Profit / Net Income</strong><p>What remains after expenses, taxes, interest, and other costs.</p></div>
+                <div><strong>Earnings</strong><p>Another word for profit, often used when discussing public companies.</p></div>
+                <div><strong>EPS</strong><p>Earnings per share. It shows how much profit is assigned to each share.</p></div>
+                <div><strong>Gross Margin</strong><p>The percentage of revenue left after the direct cost of producing goods or services.</p></div>
+                <div><strong>Profit Margin</strong><p>The percentage of revenue that becomes profit after expenses.</p></div>
+                <div><strong>Free Cash Flow</strong><p>Cash the company generates after paying for operations and capital investments.</p></div>
+                <div><strong>Debt</strong><p>Money the company owes. Debt is not always bad, but too much debt raises risk.</p></div>
+                <div><strong>Return on Equity</strong><p>A measure of how efficiently a company generates profit from shareholder capital.</p></div>
+                <div><strong>Balance Sheet</strong><p>A financial statement showing assets, liabilities, and shareholder equity.</p></div>
+              </div>
+            </div>
+
+            <div class="glossary-group">
+              <h3>Valuation terms</h3>
+              <div class="glossary-grid">
+                <div><strong>Valuation</strong><p>How expensive or cheap a stock looks compared with the company’s earnings, growth, cash flow, or assets.</p></div>
+                <div><strong>Market Cap</strong><p>The total value of a company’s shares. It equals share price multiplied by shares outstanding.</p></div>
+                <div><strong>P/E Ratio</strong><p>Price-to-earnings ratio. It compares the stock price with the company’s earnings per share.</p></div>
+                <div><strong>Forward P/E</strong><p>A P/E ratio based on expected future earnings instead of past earnings.</p></div>
+                <div><strong>PEG Ratio</strong><p>A valuation metric that compares the P/E ratio with expected earnings growth.</p></div>
+                <div><strong>Multiple</strong><p>A shortcut investors use to describe valuation, such as “20 times earnings.”</p></div>
+                <div><strong>Undervalued</strong><p>When a stock may trade below what the business is reasonably worth.</p></div>
+                <div><strong>Overvalued</strong><p>When a stock may trade above what the business is reasonably worth.</p></div>
+              </div>
+            </div>
+
+            <div class="glossary-group">
+              <h3>Risk and market terms</h3>
+              <div class="glossary-grid">
+                <div><strong>Risk</strong><p>The chance that an investment performs worse than expected or permanently loses value.</p></div>
+                <div><strong>Volatility</strong><p>How much a stock price moves up and down.</p></div>
+                <div><strong>Liquidity</strong><p>How easily an investment can be bought or sold without major price movement.</p></div>
+                <div><strong>Beta</strong><p>A measure of how volatile a stock is compared with the broader market.</p></div>
+                <div><strong>Drawdown</strong><p>A decline from a previous high.</p></div>
+                <div><strong>Margin of Safety</strong><p>A cushion between the price paid and what the investor believes the business is worth.</p></div>
+                <div><strong>Catalyst</strong><p>An event or development that could cause investors to value the company differently.</p></div>
+                <div><strong>Tailwind</strong><p>A trend that helps a company or industry grow.</p></div>
+                <div><strong>Headwind</strong><p>A trend or challenge that makes growth harder.</p></div>
+                <div><strong>Thesis</strong><p>The clear reason for owning an investment.</p></div>
+              </div>
+            </div>
+
+            <div class="glossary-group">
+              <h3>Thesis report terms</h3>
+              <div class="glossary-grid">
+                <div><strong>Business Quality Rating</strong><p>A score focused on the strength of the company itself.</p></div>
+                <div><strong>Opportunity Rating</strong><p>A relative-valuation score based on annual earnings, free-cash-flow and EBITDA yields against disclosed peers. Analyst targets and momentum are context only. Company catalysts need separate review.</p></div>
+                <div><strong>Meets our research screen?</strong><p>A decision rule based on the combined score and minimum quality threshold.</p></div>
+                <div><strong>Bull Case</strong><p>The argument for why the stock could perform well.</p></div>
+                <div><strong>Bear Case</strong><p>The argument for why the stock could perform poorly.</p></div>
+                <div><strong>What We’re Watching</strong><p>The key facts or trends that could strengthen or weaken the investment case.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="final-rule" class="learn-section final-rule">
+            <span class="section-number">08</span>
+            <h2>Final Rule</h2>
+            <div class="principle-box">
+              If you cannot clearly explain why you own a stock, you probably should not own it.
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Thesis</strong>
+      <span>Know Why You Own It.</span>
+    </div>
+    <div class="footer-links">
+      <a href="/methodology">Methodology</a>
+      <a href="/disclosures">Disclosures</a>
+      <span>Educational research only</span>
+    </div>
+  </footer>
+</body>
+</html>

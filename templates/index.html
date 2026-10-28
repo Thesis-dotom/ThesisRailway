@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research public companies through dated financial quality, relative valuation, and transparent evidence." />
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml" />
+  <title>Thesis | Company Research and Investment Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  {% include 'partials/nav.html' %}
+
+  <main>
+    <section class="hero {% if report %}compact-search{% endif %}">
+      <div class="hero-card">
+        <p class="eyebrow">Company research platform</p>
+        <h1>Research a company before you invest.</h1>
+        <p class="big">
+          Explore financial quality, compare relative valuation, and understand the evidence behind each company’s scores.
+        </p>
+
+        <form class="search-box autocomplete-form" action="/search" method="get">
+          <div class="autocomplete-wrap">
+            <input id="company-search" name="q" aria-label="Search by company name or ticker" value="{{ query }}" autocomplete="off" placeholder="Try Apple, Nvidia, Microsoft, Tesla, GM..." />
+            <div id="suggestions" class="suggestions-panel" role="listbox" aria-label="Company suggestions" hidden></div>
+          </div>
+          <button type="submit">Research</button>
+        </form>
+
+        <p class="small-note">
+          Search by company name or ticker. Select a suggestion for the most reliable match.
+        </p>
+      </div>
+
+      <aside class="side-card">
+        <h2>How Thesis evaluates a company</h2>
+        <p>
+          The report separates the strength of the business from the attractiveness of the current investment opportunity.
+        </p>
+        <div class="mini-metric">
+          <span>Strict screen threshold</span>
+          <strong>150+ combined</strong>
+        </div>
+        <div class="mini-metric">
+          <span>Minimum quality</span>
+          <strong>60/100</strong>
+        </div>
+      </aside>
+    </section>
+
+
+
+    {% if not report %}
+    <section class="container">
+      <div class="opportunity-callout">
+        <div>
+          <span class="ticker-pill">Research list</span>
+          <h2>See our Top Opportunities.</h2>
+          <p>
+            Explore every company with usable scores, including quality watchlist candidates and partial reports. The strict screen is one view of the research universe.
+          </p>
+        </div>
+        <a class="full-report-btn" href="/top-opportunities">View Top Opportunities</a>
+      </div>
+    </section>
+
+    <section class="container"><div class="info-grid">
+      <article class="panel"><span class="ticker-pill">Find a company</span><h2>Start with what matters to you.</h2><p>Choose a sector, company size, and scoring priority to find research candidates in the latest weekly snapshot.</p><a class="full-report-btn" href="/discover">Find matching companies</a></article>
+      <article class="panel"><span class="ticker-pill">Suggest coverage</span><h2>Have a company in mind?</h2><p>Send us a company name. You can add a ticker or note if you want. Suggestions go to the private owner inbox for review.</p><a class="secondary-report-btn" href="/suggest-company">Suggest a company</a></article>
+    </div></section>
+    <section class="container">
+      <div class="education-callout">
+        <div>
+          <span class="ticker-pill">New</span>
+          <h2>Learn the investment process behind the ratings.</h2>
+          <p>
+            The How to Invest page explains how to evaluate a company, manage risk, understand common investing terms, and know why you own a stock.
+          </p>
+        </div>
+        <a class="full-report-btn" href="/how-to-invest">Open How to Invest</a>
+      </div>
+    </section>
+
+    {% endif %}
+    <section id="reports" class="container">
+      {% if error %}
+        <div class="alert">{{ error }}</div>
+      {% endif %}
+
+      {% if report %}
+        <article class="report">
+          <div class="report-top">
+            <div>
+              <span class="ticker-pill">{{ report.symbol }}</span>
+              <h2>{{ report.name }}</h2>
+              <p class="muted">{{ report.sector }} · {{ report.industry }}</p>
+            </div>
+            <div class="price-box">
+              <span>Price at data date</span>
+              <strong>{{ report.price|fmt_money(report.currency) }}</strong>
+              <small>{{ report.day_change_pct|fmt_pct }} vs. previous close</small>
+            </div>
+          </div>
+
+          <p class="data-warning">{{ report.data_warning }}</p>
+          {% if report.legacy_model %}<p class="data-warning">Historical model {{ report.model_version }}. These scores use the earlier methodology and are not directly comparable with model 3.0.</p>{% endif %}
+          <p class="review-stamp">Retrieved: {{ report.retrieved_at|date_label }} · Price history through: {{ report.market_data_as_of|date_label }}<br>
+          Annual financial period: {{ report.financial_period_end or "Unavailable" }} · Cash-flow period: {{ report.cashflow_period_end or "Unavailable" }}<br>
+          Editorial review: none — automated quantitative screen.</p><p class="source-summary">Data provider: Yahoo Finance via yfinance. Filing links are verification resources; filings are not parsed by this model. <a href="{{ url_for('company_sources', symbol=report.symbol, snapshot=report.snapshot_id|default(none)) }}">Review sources for this report</a>.</p>
+
+          {% if report.rating_source %}
+            <p class="rating-source">
+              {{ report.rating_source }}
+              {% if report.top_opportunity_rank %}
+                · Ranked #{{ report.top_opportunity_rank }} on Top Opportunities
+              {% endif %}
+            </p>
+          {% endif %}
+
+
+          <div class="rating-grid">
+            <div class="rating-card">
+              <span>Business Quality Rating</span>
+              <div class="rating-number">{{ report.business_quality if report.business_quality is not none else "—" }}/100</div>
+              <div class="label">{{ report.business_label }}</div>
+            </div>
+            <div class="rating-card">
+              <span>Opportunity Rating</span>
+              <div class="rating-number">{{ report.opportunity if report.opportunity is not none else "—" }}/100</div>
+              <div class="label">{{ report.opportunity_label }}</div>
+            </div>
+          </div>
+
+          <section class="decision-card {{ report.decision.class }}">
+            <div>
+              <span class="decision-label">Meets our research screen?</span>
+              <h3>{{ report.decision.answer }}</h3>
+              <p>{{ report.decision.reason }}</p>
+            </div>
+            <div class="combined-score">
+              <span>Combined Score</span>
+              <strong>{{ report.decision.combined if report.decision.combined is not none else "—" }}/200</strong>
+            </div>
+          </section>
+
+          <section class="quick-thesis">
+            <h3>Quick Thesis</h3>
+            <p>{{ report.thesis }}</p>
+            <div class="report-actions"><a class="full-report-btn" href="#full-report">View Full Report</a><a class="secondary-report-btn" href="{{ url_for('company_sources', symbol=report.symbol, snapshot=report.snapshot_id|default(none)) }}">View Sources</a></div>
+          </section>
+
+          {% if not report.legacy_model %}
+          <section class="metrics-grid" aria-label="Core financial inputs">
+            <div><span>Operating return on capital</span><strong>{{ report.operating_return_pct|fmt_pct }}</strong></div>
+            <div><span>Median operating margin · 3 annual periods</span><strong>{{ report.operating_margin_3y_pct|fmt_pct }}</strong></div>
+            <div><span>Median FCF margin · 3 annual periods</span><strong>{{ report.fcf_margin_3y_pct|fmt_pct }}</strong></div>
+            <div><span>Net debt / annual EBITDA</span><strong>{{ report.net_debt_to_ebitda|fmt_num }}×</strong></div>
+            <div><span>Annualized revenue growth</span><strong>{{ report.revenue_cagr_pct|fmt_pct }}</strong></div>
+            <div><span>Annual earnings yield</span><strong>{{ report.earnings_yield_pct|fmt_pct }}</strong></div>
+            <div><span>Annual FCF yield</span><strong>{{ report.fcf_yield_pct|fmt_pct }}</strong></div>
+            <div><span>Annual EBITDA / EV</span><strong>{{ report.ebitda_yield_pct|fmt_pct }}</strong></div>
+          </section>
+          {% if report.quality_missing or report.opportunity_missing %}<section class="panel"><h3>What is missing?</h3><p>Each score is assessed separately. Unknown data is left unscored; known losses follow the stated scoring rule.</p><div class="missing-grid">
+          <div><h4>Quality</h4><ul>{% for item in report.quality_missing %}<li>{{ item }}</li>{% else %}<li>All required inputs available.</li>{% endfor %}</ul></div>
+          <div><h4>Opportunity</h4><ul>{% for item in report.opportunity_missing %}<li>{{ item }}</li>{% else %}<li>All required inputs available.</li>{% endfor %}</ul></div>
+          </div></section>{% endif %}
+          {% endif %}
+          <details class="panel context-note"><summary>Market and analyst context — not scored in model 3.0</summary><p>Analyst targets are third-party estimates. These figures do not add or subtract points in the current model.</p><div class="metrics-grid">
+          <div><span>Market capitalization · {{ report.currency }}</span><strong>{{ report.market_cap|fmt_money(report.currency) }}</strong></div>
+          <div><span>Trailing P/E</span><strong>{{ report.trailing_pe|fmt_num }}</strong></div>
+          <div><span>Forward P/E</span><strong>{{ report.forward_pe|fmt_num }}</strong></div>
+          <div><span>Analyst target change vs. price</span><strong>{{ report.target_upside_pct|fmt_pct }}</strong></div>
+          <div><span>Six-month price return</span><strong>{{ report.momentum_pct|fmt_pct }}</strong></div>
+          <div><span>Beta</span><strong>{{ report.beta|fmt_num }}</strong></div>
+          </div></details>
+
+          <div class="breakdowns">
+            <div class="break-card">
+              <h3>Business Quality Breakdown</h3>
+              {% for name, score, max_score in report.business_breakdown %}
+                <div class="score-row">
+                  <span>{{ name }}</span>
+                  <strong>{{ score|round(1) if score is not none else "—" }}/{{ max_score }}</strong>
+                  <div class="bar"><div class="fill" style="width: {{ ((score or 0) / max_score * 100)|round }}%"></div></div>
+                </div>
+              {% endfor %}
+            </div>
+
+            <div class="break-card">
+              <h3>Opportunity Breakdown</h3>
+              {% for name, score, max_score in report.opportunity_breakdown %}
+                <div class="score-row">
+                  <span>{{ name }}</span>
+                  <strong>{{ score|round(1) if score is not none else "—" }}/{{ max_score }}</strong>
+                  <div class="bar"><div class="fill" style="width: {{ ((score or 0) / max_score * 100)|round }}%"></div></div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <section class="report-section">
+            <h3>Positive financial signals</h3>
+            <ul>
+              {% for item in report.why_like %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="report-section">
+            <h3>Risks and limitations</h3>
+            <ul>
+              {% for item in report.risks %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="report-section">
+            <h3>What Could Change Our Opinion</h3>
+            <ul>
+              {% for item in report.change_opinion %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="report-section"><h3>Score evidence</h3><div class="table-scroll"><table>
+<thead><tr><th>Factor</th><th>Input</th><th>Points</th><th>Comparison and rule</th></tr></thead><tbody>
+{% for e in report.score_evidence %}<tr><td>{{ e.factor }}</td><td>{{ e.input|fmt_num }}</td><td>{{ e.score|fmt_num if e.score is not none else "Unscored" }} / {{ e.maximum }}</td><td>
+{% if e.peer %}<details class="peer-detail"><summary>{{ e.peer.basis|title }}: {{ e.peer.group }} · {{ e.peer.count }} peers · median {{ e.peer.median|fmt_num }}%</summary><p>As of {{ e.peer.as_of|date_label }}. Peer annual periods: {{ e.peer.oldest_period[:10] }} to {{ e.peer.newest_period[:10] }}. This company is excluded from its own reference.</p><p>{{ e.peer.symbols|join(', ') }}</p></details>
+{% elif e.note %}{{ e.note }}{% else %}<a href="/methodology">See scoring rule</a>{% endif %}</td></tr>{% endfor %}</tbody>
+</table></div><p>Growth, margins, returns and yields are percentages; net debt / EBITDA is a multiple. Component points are rounded for display; totals use the underlying precision. <a href="/methodology">Exact scoring rules and limitations</a>.</p></section>
+          {% if report.annual_periods %}<section class="report-section"><h3>Dated annual evidence</h3><p>Financial currency: {{ report.financial_currency }}. Values below are absolute amounts in that currency, except diluted EPS. Growth uses the latest three consecutive annual periods (about {{ report.quality_window_years|fmt_num }} years between endpoints). Valuation uses the latest aligned annual period and the displayed market-data date.</p><div class="table-scroll"><table class="annual-table"><thead><tr><th>Period end</th><th>Revenue</th><th>Operating income</th><th>Net income</th><th>Free cash flow</th><th>Diluted EPS</th></tr></thead><tbody>
+{% for row in report.annual_periods %}<tr><td>{{ row.period_end }}</td><td>{{ row.revenue|fmt_num }}</td><td>{{ row.operating_income|fmt_num }}</td><td>{{ row.net_income|fmt_num }}</td><td>{{ row.free_cash_flow|fmt_num }}</td><td>{{ row.diluted_eps|fmt_num }}</td></tr>{% endfor %}</tbody></table></div></section>{% endif %}
+          <section id="full-report" class="full-report">
+            <div class="full-report-header">
+              <span class="ticker-pill">Deep Dive</span>
+              <h2>Full Thesis Report</h2>
+              <p class="muted">Financial evidence and limitations behind this screen.</p>
+            </div>
+
+            <div class="deep-grid">
+              <article>
+                <h3>Company Overview</h3>
+                <p>{{ report.full_report.overview }}</p>
+              </article>
+
+              <article>
+                <h3>Bull Case</h3>
+                <ul>
+                  {% for item in report.full_report.bull_case %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+
+              <article>
+                <h3>Bear Case</h3>
+                <ul>
+                  {% for item in report.full_report.bear_case %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+
+              <article>
+                <h3>What We’re Watching</h3>
+                <ul>
+                  {% for item in report.full_report.watching %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+            </div>
+          </section>
+        </article>
+      {% else %}
+        <div class="empty-state">
+          <h2>Start with a search.</h2>
+          <p>
+            Search a company above, or use the company finder to explore the weekly research universe. Saved reports show the snapshot date; companies outside that universe require a live data request.
+          </p>
+        </div>
+      {% endif %}
+    </section>
+
+    <section id="framework" class="container">
+      <div class="section-card">
+        <h2>Scoring Framework</h2>
+        <p class="section-lead">
+          Quality and relative valuation are scored independently. Every usable company stays accessible. The strict research screen requires a combined score of 150+ and Quality of at least 60; a separate quality watchlist starts at 70. These provisional thresholds have not been backtested.
+        </p>
+
+        <div class="rubric-grid">
+          <div class="framework-card">
+            <h3>Business Quality Rating</h3>
+            <ul>
+              <li>Operating return on capital — 20</li><li>Three-year operating margin — 15</li>
+              <li>Three-year free-cash-flow margin — 15</li><li>Cash-flow consistency — 10</li>
+              <li>Net debt / EBITDA — 15</li><li>Annualized revenue growth — 10</li><li>Annualized diluted EPS growth — 15</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>Opportunity Rating</h3>
+            <ul>
+              <li>Annual earnings yield vs. peers — 35</li><li>Annual free-cash-flow yield vs. peers — 35</li>
+              <li>Annual EBITDA / enterprise value vs. peers — 30</li><li>Analyst targets and momentum are context only.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <div class="section-card">
+        <h2>About This Prototype</h2>
+        <p>
+          Thesis is designed to make company research clearer and more structured. Ratings are analytical estimates, not guarantees or personalized recommendations.
+        </p>
+        <p class="disclaimer">
+          This is an educational prototype. It uses public market data through a non-official wrapper and should not be treated as financial advice.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Thesis</strong>
+      <span>Know Why You Own It.</span>
+    </div>
+    <div class="footer-links">
+      <a href="/methodology">Methodology</a>
+      <a href="/disclosures">Disclosures</a>
+      <span>Educational research only</span>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("company-search");
+    const suggestionsPanel = document.getElementById("suggestions");
+
+    let activeSuggestion = -1;
+    let currentSuggestions = [];
+
+    function hideSuggestions() {
+      suggestionsPanel.hidden = true;
+      suggestionsPanel.innerHTML = "";
+      activeSuggestion = -1;
+      currentSuggestions = [];
+    }
+
+    function renderSuggestions(items) {
+      currentSuggestions = items || [];
+      activeSuggestion = -1;
+
+      if (!currentSuggestions.length) {
+        hideSuggestions();
+        return;
+      }
+
+      suggestionsPanel.innerHTML = "";
+      currentSuggestions.forEach((item, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "suggestion-item";
+        button.textContent = item.name;
+        button.addEventListener("click", () => {
+          // Show company names in autocomplete, but search by ticker when available.
+          // This prevents name-search mismatches like Modine Manufacturing returning the wrong company.
+          const query = item.symbol || item.name;
+          searchInput.value = item.name;
+          hideSuggestions();
+          window.location.href = `/search?q=${encodeURIComponent(query)}`;
+        });
+        suggestionsPanel.appendChild(button);
+      });
+
+      suggestionsPanel.hidden = false;
+    }
+
+    let suggestionTimer = null;
+
+    if (searchInput && suggestionsPanel) {
+      const searchForm = searchInput.form;
+      const searchButton = searchForm.querySelector("button[type='submit']");
+
+      searchForm.addEventListener("submit", () => {
+        searchButton.disabled = true;
+        searchButton.textContent = "Researching…";
+      });
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim();
+
+        clearTimeout(suggestionTimer);
+
+        if (query.length < 2) {
+          hideSuggestions();
+          return;
+        }
+
+        suggestionTimer = setTimeout(async () => {
+          try {
+            const response = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`);
+            const data = await response.json();
+            renderSuggestions(data);
+          } catch (error) {
+            hideSuggestions();
+          }
+        }, 180);
+      });
+
+      searchInput.addEventListener("keydown", (event) => {
+        const buttons = Array.from(suggestionsPanel.querySelectorAll(".suggestion-item"));
+
+        if (suggestionsPanel.hidden || !buttons.length) {
+          return;
+        }
+
+        if (event.key === "ArrowDown") {
+          event.preventDefault();
+          activeSuggestion = (activeSuggestion + 1) % buttons.length;
+        } else if (event.key === "ArrowUp") {
+          event.preventDefault();
+          activeSuggestion = (activeSuggestion - 1 + buttons.length) % buttons.length;
+        } else if (event.key === "Enter" && activeSuggestion >= 0) {
+          event.preventDefault();
+          buttons[activeSuggestion].click();
+          return;
+        } else if (event.key === "Escape") {
+          hideSuggestions();
+          return;
+        }
+
+        buttons.forEach((button, index) => {
+          button.classList.toggle("active", index === activeSuggestion);
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!searchInput.contains(event.target) && !suggestionsPanel.contains(event.target)) {
+          hideSuggestions();
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

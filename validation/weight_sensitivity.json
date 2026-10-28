@@ -1,0 +1,165 @@
+{
+  "snapshot_id": "20261028T190809-9403",
+  "scenarios": [
+    {
+      "factor": "Operating return on capital",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 4,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Operating return on capital",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 4,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Three-year operating margin",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 5,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Three-year operating margin",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 2,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Three-year free-cash-flow margin",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 4,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Three-year free-cash-flow margin",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 3,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Cash-flow consistency",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 1,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Cash-flow consistency",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 3,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Net debt / EBITDA",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 5,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Net debt / EBITDA",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 2,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annualized revenue growth",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 4,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annualized revenue growth",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 2,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annualized diluted EPS growth",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 3,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annualized diluted EPS growth",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 6,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annual earnings yield",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 3,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annual earnings yield",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 2,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annual free-cash-flow yield",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 5,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annual free-cash-flow yield",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 6,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annual EBITDA / enterprise value",
+      "multiplier": 0.8,
+      "top10_overlap": 10,
+      "largest_rank_move": 3,
+      "screen_entries": [],
+      "screen_exits": []
+    },
+    {
+      "factor": "Annual EBITDA / enterprise value",
+      "multiplier": 1.2,
+      "top10_overlap": 10,
+      "largest_rank_move": 5,
+      "screen_entries": [],
+      "screen_exits": []
+    }
+  ]
+}

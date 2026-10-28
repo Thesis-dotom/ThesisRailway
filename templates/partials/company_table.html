@@ -1,0 +1,13 @@
+<div class="table-scroll research-table-wrap"><table class="research-table">
+<caption class="visually-hidden">Company research results and independent scores</caption>
+<thead><tr><th scope="col">Company</th><th scope="col">Quality /100</th><th scope="col">Opportunity /100</th><th scope="col">Combined /200</th><th scope="col">Research status</th><th scope="col">Report</th></tr></thead>
+<tbody>{% for item in items %}<tr>
+<td><span class="ticker-pill">{{ item.symbol }}</span><strong class="company-name">{{ item.name }}</strong><span class="muted">{{ item.sector }}</span>{% if item.rank %}<small class="muted">Snapshot rank #{{ item.rank }}</small>{% endif %}
+{% if item.why %}<details class="ranking-note"><summary>Research notes</summary><p>{{ item.why }}</p><p>{{ item.risk }}</p><p>{{ item.change }}</p>{% if item.reasons %}<ul>{% for reason in item.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>{% endif %}</details>{% endif %}</td>
+<td class="score-cell">{{ item.quality if item.quality is not none else '—' }}</td>
+<td class="score-cell">{{ item.opportunity if item.opportunity is not none else '—' }}</td>
+<td class="score-cell">{{ item.combined if item.combined is defined and item.combined is not none else (item.quality + item.opportunity if item.quality is not none and item.opportunity is not none else '—') }}</td>
+<td><span class="status-pill {{ item.category|default('screen') }}">{{ 'Screen match' if item.screen_match|default(true) else 'Quality watchlist' if item.category == 'watchlist' else 'Research list' }}</span>{% if item.partial %}<small class="muted">One score incomplete</small>{% endif %}</td>
+<td><a class="text-link" href="{{ url_for('search', q=item.symbol, snapshot=snapshot.id) }}">View report<span class="visually-hidden"> for {{ item.name }}</span> →</a></td>
+</tr>{% else %}<tr><td colspan="6">No companies match these preferences. Broaden a filter to explore more of the research universe.</td></tr>{% endfor %}</tbody>
+</table></div>

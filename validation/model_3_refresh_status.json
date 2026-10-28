@@ -1,0 +1,5614 @@
+{
+  "state": "published",
+  "started_at": "2026-10-28T18:31:13.988053+00:00",
+  "model_version": "3.0",
+  "universe_count": 109,
+  "attempts": {
+    "MOD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:31:25.106902+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "IESC": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:31:39.406713+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ACLS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:31:52.537376+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "POWL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:32:05.872232+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ONTO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:32:19.062276+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NVMI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:32:32.291383+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AMKR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:32:46.138921+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TMDX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:32:59.296096+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MYRG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:33:12.564975+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FLR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:33:26.222767+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FIX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:33:42.781826+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "EME": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:33:57.220321+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "STRL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:34:10.514838+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "WTS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:34:25.166668+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BMI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:34:29.879041+00:00",
+        "complete": false,
+        "missing_data": [],
+        "error_type": "ValueError",
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BMI",
+            "error_type": "ConnectionError"
+          },
+          {
+            "path": "/v8/finance/chart/BMI",
+            "error_type": "ConnectionError"
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:01:22.017695+00:00",
+        "complete": false,
+        "missing_data": [
+          "Operating return on capital",
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Net debt / EBITDA",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ITRI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:34:34.178218+00:00",
+        "complete": false,
+        "missing_data": [],
+        "error_type": "ValueError",
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ITRI",
+            "error_type": "ConnectionError"
+          },
+          {
+            "path": "/v8/finance/chart/ITRI",
+            "error_type": "ConnectionError"
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:06:57.054587+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AAON": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:34:50.971028+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NVT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:35:05.300403+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "HUBB": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:35:19.044714+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "EXLS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:35:34.305199+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "G": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:35:48.390408+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/G",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/G",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FSS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:36:04.589617+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MLI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:36:21.622316+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AIT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:36:37.725714+00:00",
+        "complete": false,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annualized diluted EPS growth",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:07:08.804385+00:00",
+        "complete": false,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annualized diluted EPS growth",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SPXC": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:36:52.453793+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:37:08.706071+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MOG-A": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:37:21.753591+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "HEI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:37:37.176588+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "LECO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:37:51.524264+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TREX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:38:14.717441+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "UFPI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:38:38.348102+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MEDP": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:39:02.512941+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ENSG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:39:25.895616+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CHE": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:40:29.869623+00:00",
+        "complete": false,
+        "missing_data": [],
+        "error_type": "TimeoutExpired",
+        "rate_limited": false,
+        "requests": []
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:07:29.388183+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MMSI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:41:03.908197+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ICUI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:41:18.738054+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NEOG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:41:31.908638+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AZTA": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:41:45.809391+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BRKR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:42:00.853029+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "OLED": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:42:13.937746+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FORM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:42:27.409895+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "COHU": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:42:40.942810+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DIOD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:42:54.703098+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ALGM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:43:08.348780+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SITM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:43:43.702118+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BOX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:44:10.217855+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DOCN": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:44:23.221873+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "QLYS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:44:36.045778+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TENB": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:44:49.080053+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CAT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:45:04.557001+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CAT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CAT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CAT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CAT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CAT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CAT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CAT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DE": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:45:18.953771+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DE",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DE",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ETN": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:45:40.305074+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ETN",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ETN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ETN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ETN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ETN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ETN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ETN",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "PH": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:46:11.715585+00:00",
+        "complete": false,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annualized diluted EPS growth",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:07:40.993194+00:00",
+        "complete": false,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annualized diluted EPS growth",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PH",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ITW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:46:25.546104+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ITW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ITW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ITW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ROK": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:46:39.059642+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ROK",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ROK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ROK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROK",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "IR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:46:52.213853+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/IR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/IR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/IR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:47:06.386689+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AME": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:47:37.182212+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AME",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AME",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AME",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AME",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "XYL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:47:50.025438+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/XYL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/XYL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/XYL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/XYL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/XYL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/XYL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/XYL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "PNR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:48:03.410503+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/PNR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PNR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PNR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PNR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PNR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PNR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PNR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "GNRC": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:48:17.693032+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/GNRC",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/GNRC",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/GNRC",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/GNRC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/GNRC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/GNRC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/GNRC",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "PCAR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:48:31.772211+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/PCAR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PCAR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PCAR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PCAR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PCAR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PCAR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PCAR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CMI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:48:45.900984+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CMI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DOV": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:48:59.983090+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DOV",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOV",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DOV",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DOV",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOV",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOV",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOV",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MSFT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:49:21.112985+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MSFT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MSFT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MSFT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ORCL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:49:36.054760+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ORCL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ORCL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ORCL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ORCL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ORCL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ORCL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ORCL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ADBE": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:49:50.805076+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ADBE",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADBE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ADBE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ADBE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADBE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADBE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADBE",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CRM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:50:05.694177+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CRM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CRM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CRM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CRM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CRM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CRM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CRM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "INTU": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:50:19.180971+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/INTU",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/INTU",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/INTU",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/INTU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/INTU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/INTU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/INTU",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NOW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:50:32.848476+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NOW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ADSK": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:50:46.669079+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ADSK",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADSK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ADSK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ADSK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADSK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADSK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADSK",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CDNS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:51:01.418037+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CDNS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CDNS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CDNS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CDNS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CDNS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CDNS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CDNS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SNPS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:51:15.674998+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SNPS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SNPS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SNPS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SNPS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SNPS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SNPS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SNPS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ROP": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:51:33.834438+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ROP",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROP",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ROP",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ROP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ROP",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ANET": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:51:51.231298+00:00",
+        "complete": false,
+        "missing_data": [
+          "Operating return on capital",
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Net debt / EBITDA",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:07:53.179171+00:00",
+        "complete": false,
+        "missing_data": [
+          "Operating return on capital",
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Net debt / EBITDA",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ANET",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CSCO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:52:05.875093+00:00",
+        "complete": false,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annualized diluted EPS growth",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T19:08:07.831585+00:00",
+        "complete": false,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annualized diluted EPS growth",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CSCO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AVGO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:52:23.057746+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AVGO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVGO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AVGO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AVGO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVGO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVGO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVGO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TXN": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:52:38.948758+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TXN",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TXN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TXN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TXN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TXN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TXN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TXN",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ADI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:52:54.062738+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ADI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ADI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ADI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ADI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "JNJ": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:53:10.286024+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/JNJ",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/JNJ",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/JNJ",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/JNJ",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/JNJ",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/JNJ",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/JNJ",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ABT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:53:23.819986+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ABT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ABT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ABT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ABT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ABT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ABT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ABT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MDT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:53:40.033693+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MDT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MDT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MDT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MDT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MDT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MDT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MDT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SYK": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:53:54.413531+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SYK",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SYK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SYK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SYK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SYK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SYK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SYK",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BSX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:54:09.594038+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BSX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BSX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BSX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BSX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BSX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BSX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BSX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BDX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:54:32.559200+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BDX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "EW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:54:46.707674+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/EW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/EW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/EW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TMO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:55:03.753402+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TMO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TMO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TMO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DHR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:55:17.988064+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DHR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DHR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DHR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "WAT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:55:32.151087+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/WAT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WAT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/WAT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/WAT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WAT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WAT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WAT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "HD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:55:45.375899+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/HD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "LOW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:55:59.549083+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/LOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LOW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NVR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:56:13.557695+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NVR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NVR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NVR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "PHM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:56:27.727096+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/PHM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PHM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PHM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PHM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PHM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PHM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PHM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DHI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:56:42.009809+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DHI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DHI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DHI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DHI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "LEN": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:57:00.410251+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/LEN",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LEN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LEN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LEN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LEN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LEN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LEN",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TOL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:57:14.369066+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TOL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TOL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TOL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TOL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TOL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TOL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TOL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NKE": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:57:30.375477+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NKE",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NKE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NKE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NKE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NKE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NKE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NKE",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DECK": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:57:44.094623+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DECK",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DECK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DECK",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DECK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DECK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DECK",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DECK",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "RL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:57:58.959305+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/RL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/RL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/RL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/RL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/RL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/RL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/RL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "APD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:58:14.250886+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/APD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/APD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/APD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/APD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/APD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/APD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/APD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "LIN": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:58:27.853172+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/LIN",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LIN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LIN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LIN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LIN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LIN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LIN",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SHW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:58:41.908760+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SHW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SHW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SHW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SHW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SHW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SHW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SHW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "PPG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:58:58.576326+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/PPG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PPG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PPG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/PPG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PPG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PPG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/PPG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ECL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:59:13.646366+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ECL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ECL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ECL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ECL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ECL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ECL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ECL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:59:27.488705+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DOW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:59:42.015258+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DOW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NUE": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T18:59:58.734308+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NUE",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NUE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NUE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NUE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NUE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NUE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NUE",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "STLD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T19:00:21.090193+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/STLD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STLD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/STLD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/STLD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STLD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STLD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STLD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AVY": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T19:00:37.642112+00:00",
+        "complete": true,
+        "missing_data": [
+          "Three-year operating margin: at least 8 comparable peer observations required",
+          "Three-year free-cash-flow margin: at least 8 comparable peer observations required",
+          "Annual earnings yield: at least 8 comparable peer observations required",
+          "Annual free-cash-flow yield: at least 8 comparable peer observations required",
+          "Annual EBITDA / enterprise value: at least 8 comparable peer observations required"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AVY",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVY",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AVY",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AVY",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVY",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVY",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AVY",
+            "http_status": 200
+          }
+        ]
+      }
+    ]
+  },
+  "stop_reason": null,
+  "fetched_count": 109,
+  "raw_complete_count": 104,
+  "universe": [
+    "MOD",
+    "IESC",
+    "ACLS",
+    "POWL",
+    "ONTO",
+    "NVMI",
+    "AMKR",
+    "TMDX",
+    "MYRG",
+    "FLR",
+    "FIX",
+    "EME",
+    "STRL",
+    "WTS",
+    "BMI",
+    "ITRI",
+    "AAON",
+    "NVT",
+    "HUBB",
+    "EXLS",
+    "G",
+    "FSS",
+    "MLI",
+    "AIT",
+    "SPXC",
+    "CW",
+    "MOG-A",
+    "HEI",
+    "LECO",
+    "TREX",
+    "UFPI",
+    "MEDP",
+    "ENSG",
+    "CHE",
+    "MMSI",
+    "ICUI",
+    "NEOG",
+    "AZTA",
+    "BRKR",
+    "OLED",
+    "FORM",
+    "COHU",
+    "DIOD",
+    "ALGM",
+    "SITM",
+    "BOX",
+    "DOCN",
+    "QLYS",
+    "TENB",
+    "CAT",
+    "DE",
+    "ETN",
+    "PH",
+    "ITW",
+    "ROK",
+    "IR",
+    "TT",
+    "AME",
+    "XYL",
+    "PNR",
+    "GNRC",
+    "PCAR",
+    "CMI",
+    "DOV",
+    "MSFT",
+    "ORCL",
+    "ADBE",
+    "CRM",
+    "INTU",
+    "NOW",
+    "ADSK",
+    "CDNS",
+    "SNPS",
+    "ROP",
+    "ANET",
+    "CSCO",
+    "AVGO",
+    "TXN",
+    "ADI",
+    "JNJ",
+    "ABT",
+    "MDT",
+    "SYK",
+    "BSX",
+    "BDX",
+    "EW",
+    "TMO",
+    "DHR",
+    "WAT",
+    "HD",
+    "LOW",
+    "NVR",
+    "PHM",
+    "DHI",
+    "LEN",
+    "TOL",
+    "NKE",
+    "DECK",
+    "RL",
+    "APD",
+    "LIN",
+    "SHW",
+    "PPG",
+    "ECL",
+    "DD",
+    "DOW",
+    "NUE",
+    "STLD",
+    "AVY"
+  ],
+  "resumed_at": "2026-10-28T19:06:16.967691+00:00",
+  "snapshot_id": "20261028T190809-9403",
+  "complete_count": 104,
+  "recommendation_count": 10,
+  "finished_at": "2026-10-28T19:08:10.088902+00:00"
+}

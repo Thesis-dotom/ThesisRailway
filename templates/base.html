@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Explore dated company research, compare financial quality and valuation, and suggest companies for review.">
+<title>{% block title %}Thesis{% endblock %}</title>
+<link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head><body>{% include 'partials/nav.html' %}
+<main>{% block content %}{% endblock %}</main>
+<footer class="site-footer"><div><strong>Thesis</strong><span>Know Why You Own It.</span></div>
+<div class="footer-links"><a href="/how-to-invest">How to Invest</a><a href="/methodology">Methodology</a><a href="/disclosures">Disclosures</a><a href="/admin/login">Owner sign-in</a><span>Educational research only</span></div></footer>
+</body></html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}{% block title %}Find a company | Thesis{% endblock %}
+{% block content %}
+<section class="learn-hero"><div><p class="eyebrow">Your next research starting point</p><h1>Find a company.</h1><p class="big">Choose what you want to explore. We’ll show companies that match your research preferences.</p></div></section>
+<section class="container section-stack">
+<form class="finder-form panel" method="get">
+{% if snapshot %}<input type="hidden" name="snapshot" value="{{ snapshot.id }}">{% endif %}
+<div class="form-grid">
+<label>Sector<select name="sector"><option value="">Any sector</option>{% for option in sectors %}<option value="{{ option }}" {% if sector==option %}selected{% endif %}>{{ option }}</option>{% endfor %}</select></label>
+<label>Company size<select name="size"><option value="">Any size</option><option value="small" {% if size=='small' %}selected{% endif %}>Under $2 billion</option><option value="mid" {% if size=='mid' %}selected{% endif %}>$2–10 billion</option><option value="large" {% if size=='large' %}selected{% endif %}>$10 billion or more</option></select></label>
+<label>Research priority<select name="sort"><option value="combined" {% if sort=='combined' %}selected{% endif %}>Balance quality and valuation</option><option value="quality" {% if sort=='quality' %}selected{% endif %}>Financial quality first</option><option value="opportunity" {% if sort=='opportunity' %}selected{% endif %}>Relative valuation first</option></select></label>
+<label>Minimum Quality score<select name="minimum_quality">{% for value,label in [(0,'No minimum'),(60,'60 or higher'),(70,'70 or higher'),(80,'80 or higher')] %}<option value="{{ value }}" {% if minimum_quality==value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+</div><div class="form-actions"><button type="submit">Find research candidates</button><a href="/discover">Reset preferences</a></div>
+<p class="small-note">Results come from our configured research universe. These filters do not assess your finances, investment suitability, or portfolio.</p>
+</form>
+{% if not snapshot %}<div class="alert" role="status">Research data is not available yet. Please check back after the next successful refresh.</div>
+{% elif searched %}
+{% if stale %}<div class="alert" role="status">This snapshot is historical. The weekly refresh is overdue.</div>{% endif %}
+<div class="results-heading"><div><p class="eyebrow">Matches your preferences</p><h2>{{ total }} research candidates</h2></div><p class="muted">Data updated {{ snapshot.generated_at|date_label }}</p></div>
+{% include 'partials/company_table.html' %}
+<div class="pagination">{% if page>1 %}<a class="secondary-report-btn" href="{{ url_for('discover',page=page-1,snapshot=snapshot.id,sector=sector,size=size,sort=sort,minimum_quality=minimum_quality) }}">Previous companies</a>{% endif %}
+{% if has_more %}<a class="full-report-btn" href="{{ url_for('discover',page=page+1,snapshot=snapshot.id,sector=sector,size=size,sort=sort,minimum_quality=minimum_quality) }}">Show more companies</a>{% endif %}<span>Page {{ page }}</span></div>
+{% else %}<div class="info-grid"><article class="panel"><span class="step-number">01</span><h2>Choose an area</h2><p>Explore a sector or company size you want to understand better.</p></article><article class="panel"><span class="step-number">02</span><h2>Compare the evidence</h2><p>Quality and valuation have separate scores, with the input dates and peer groups visible.</p></article><article class="panel"><span class="step-number">03</span><h2>Build your own thesis</h2><p>Use filings and business research to investigate why the opportunity may exist.</p></article></div>{% endif %}
+<div class="inline-callout"><div><h2>Have another company in mind?</h2><p>Suggest a company you would like us to research.</p></div><a class="secondary-report-btn" href="/suggest-company">Suggest a company</a></div>
+</section>{% endblock %}

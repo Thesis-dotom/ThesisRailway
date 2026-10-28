@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block title %}Owner sign-in | Thesis{% endblock %}
+{% block content %}<section class="container narrow-section section-stack admin-section"><p class="eyebrow">Private research inbox</p><h1>Owner sign-in</h1>
+{% if error %}<div class="alert" role="alert">{{ error }}</div>{% endif %}
+{% if not enabled %}<div class="alert">Owner access is not configured. Follow the owner setup instructions included with the website.</div>{% endif %}
+<form class="panel research-form" method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><label>Owner password<input type="password" name="password" autocomplete="current-password" required></label><button {% if not enabled %}disabled{% endif %}>Sign in</button></form></section>{% endblock %}

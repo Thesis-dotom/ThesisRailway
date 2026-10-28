@@ -1,0 +1,2148 @@
+{
+  "state": "published",
+  "started_at": "2026-10-28T17:46:38.071088+00:00",
+  "model_version": "2.0",
+  "universe_count": 50,
+  "attempts": {
+    "MOD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:46:47.555050+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "IESC": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:47:00.524238+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/IESC",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ACLS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:47:12.188734+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ACLS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "POWL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:47:22.973862+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/POWL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ONTO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:47:34.855456+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ONTO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NVMI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:47:46.078769+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVMI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AMKR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:47:57.014499+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AMKR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TMDX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:48:07.287066+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TMDX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MYRG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:48:18.241770+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MYRG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FLR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:48:29.337563+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T17:57:38.588794+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FLR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FIX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:48:43.637755+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FIX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "EME": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:48:57.383393+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EME",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "STRL": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:49:09.087856+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/STRL",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "WTS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:49:20.883616+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WTS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BMI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:49:32.311078+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BMI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ITRI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:49:43.029796+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ITRI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AAON": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:49:54.612866+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AAON",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NVT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:50:06.115442+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NVT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "HUBB": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:50:17.414863+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HUBB",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "EXLS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:50:27.915943+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/EXLS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "G": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:50:40.322441+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/G",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/G",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/G",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/G",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "WNS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:50:52.151855+00:00",
+        "complete": false,
+        "missing_data": [
+          "Revenue growth",
+          "Earnings growth",
+          "Net profit margin",
+          "Return on equity",
+          "Debt / equity",
+          "Free cash flow",
+          "Trailing P/E",
+          "Analyst target upside",
+          "Six-month price return",
+          "Price",
+          "Market Cap",
+          "Recent dated market data",
+          "Recent dated financial statements",
+          "Recent dated cash-flow statement"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/WNS",
+            "http_status": 404
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WNS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/WNS",
+            "http_status": 404
+          },
+          {
+            "path": "/v8/finance/chart/WNS",
+            "http_status": 404
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WNS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WNS",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T17:57:52.559950+00:00",
+        "complete": false,
+        "missing_data": [
+          "Revenue growth",
+          "Earnings growth",
+          "Net profit margin",
+          "Return on equity",
+          "Debt / equity",
+          "Free cash flow",
+          "Trailing P/E",
+          "Analyst target upside",
+          "Six-month price return",
+          "Price",
+          "Market Cap",
+          "Recent dated market data",
+          "Recent dated financial statements",
+          "Recent dated cash-flow statement"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/WNS",
+            "http_status": 404
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WNS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/WNS",
+            "http_status": 404
+          },
+          {
+            "path": "/v8/finance/chart/WNS",
+            "http_status": 404
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WNS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/WNS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FSS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:51:03.663672+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FSS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MLI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:51:15.909945+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MLI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AIT": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:51:29.424972+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AIT",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SPXC": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:51:42.136488+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SPXC",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CW": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:51:53.791735+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CW",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MOG-A": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:52:05.595727+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MOG-A",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "HEI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:52:17.266728+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/HEI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "LECO": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:52:29.365449+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/LECO",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TREX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:52:42.929451+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TREX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "UFPI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:52:55.869702+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/UFPI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MEDP": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:53:07.319650+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MEDP",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ENSG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:53:19.923428+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ENSG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "CHE": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:53:32.809773+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/CHE",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "MMSI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:53:45.682457+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/MMSI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ICUI": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:53:58.917785+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ICUI",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "NEOG": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:54:12.333315+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T17:58:07.089170+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/NEOG",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "AZTA": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:54:25.269786+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T17:58:18.711391+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/AZTA",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BRKR": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:54:39.152218+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T17:58:31.452750+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BRKR",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "OLED": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:54:52.970534+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/OLED",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "FORM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:55:06.289755+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/FORM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "COHU": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:55:20.747688+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "at": "2026-10-28T17:58:43.792336+00:00",
+        "complete": false,
+        "missing_data": [
+          "Trailing P/E"
+        ],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/COHU",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DIOD": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:55:36.744177+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DIOD",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "ALGM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:55:50.066524+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/ALGM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "SITM": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:56:03.360736+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/SITM",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "BOX": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:56:16.934029+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/BOX",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "DOCN": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:56:31.596204+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/DOCN",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "QLYS": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:56:45.445872+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/QLYS",
+            "http_status": 200
+          }
+        ]
+      }
+    ],
+    "TENB": [
+      {
+        "attempt": 1,
+        "at": "2026-10-28T17:56:56.746924+00:00",
+        "complete": true,
+        "missing_data": [],
+        "error_type": null,
+        "rate_limited": false,
+        "requests": [
+          {
+            "path": "/v10/finance/quoteSummary/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/v7/finance/quote",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/v8/finance/chart/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          },
+          {
+            "path": "/ws/fundamentals-timeseries/v1/finance/timeseries/TENB",
+            "http_status": 200
+          }
+        ]
+      }
+    ]
+  },
+  "stop_reason": null,
+  "fetched_count": 50,
+  "complete_count": 44,
+  "snapshot_id": "20261028T175845-8140",
+  "recommendation_count": 2,
+  "finished_at": "2026-10-28T17:58:45.842240+00:00"
+}

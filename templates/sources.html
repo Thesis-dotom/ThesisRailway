@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if report %}Sources for {{ report.name }}{% else %}Company Sources{% endif %} | Thesis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+{% include 'partials/nav.html' %}
+<main>
+{% if report %}
+<section class="learn-hero"><div><p class="eyebrow">Report transparency</p><h1>Sources for {{ report.name }}</h1><p class="big">Review the market data, filings, company information, and calculation references behind this report.</p></div></section>
+<section class="container">
+<div class="source-company-header"><div><span class="ticker-pill">{{ report.symbol }}</span><h2>{{ report.name }}</h2><p class="muted">{{ report.exchange }} · {{ report.sector }} · {{ report.industry }}</p></div><a class="full-report-btn" href="{{ url_for('search', q=report.symbol, snapshot=report.snapshot_id|default(none)) }}">Return to Report</a></div>
+<div class="source-grid">
+{% for source in report.sources %}
+<article class="source-card"><span class="source-type">{{ source.type }}</span><h3>{{ source.label }}</h3><p>{{ source.covers }}</p><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">Open source</a></article>
+{% endfor %}
+</div>
+<section class="source-explanation"><h2>Directly sourced versus calculated</h2><div class="source-explanation-grid"><article><h3>Directly sourced</h3><ul><li>Share price and historical price data</li><li>Market capitalization</li><li>P/E, forward P/E, PEG, and beta when available</li><li>Revenue growth, profit margin, ROE, and analyst targets when available</li><li>Financial statements supplied by Yahoo Finance; filing links are independent verification resources, not automatically reviewed sources</li></ul></article><article><h3>Calculated from provider data</h3><ul><li>Aligned annual margins, growth, cash-flow consistency, capital returns and valuation yields</li><li>Business Quality Rating</li><li>Opportunity Rating</li><li>Meets our research screen? conclusion</li><li>Top Opportunities rankings</li><li>Thesis summaries, bull cases, bear cases, and risk interpretations</li></ul></article></div></section>
+<p class="data-warning">Verify material figures in SEC filings and company investor-relations materials before making an investment decision.</p>
+</section>
+{% else %}
+<section class="container"><div class="alert">{{ error }}</div><a class="full-report-btn" href="/">Return Home</a></section>
+{% endif %}
+</main>
+<footer class="site-footer"><div><strong>Thesis</strong><span>Know Why You Own It.</span></div><div class="footer-links"><a href="/methodology">Methodology</a><a href="/disclosures">Disclosures</a><span>Educational research only</span></div></footer>
+</body>
+</html>

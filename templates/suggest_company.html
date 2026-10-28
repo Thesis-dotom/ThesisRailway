@@ -1,0 +1,17 @@
+{% extends 'base.html' %}{% block title %}Suggest a company | Thesis{% endblock %}
+{% block content %}
+<section class="learn-hero"><div><p class="eyebrow">Help shape the research list</p><h1>Which company would you like to see?</h1><p class="big">Send us a company name. That’s all we need to add it to the review inbox.</p></div></section>
+<section class="container narrow-section section-stack">
+{% if submitted %}<div class="success-notice" role="status"><h2>Suggestion received.</h2><p>Your reference is <strong>{{ submitted }}</strong>. It is saved for the site owner to review. Submission does not guarantee coverage or a recommendation.</p><a href="/discover">Explore companies already covered →</a></div>{% endif %}
+{% if error %}<div class="alert" role="alert">{{ error }}</div>{% endif %}
+{% if not enabled %}<div class="alert" role="status">Company suggestions are temporarily unavailable. You can still explore the current research list.</div>{% endif %}
+<form class="panel research-form" method="post" action="/suggest-company">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+<div class="honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<label>Company name<input name="company" value="{{ values.company }}" minlength="2" maxlength="120" placeholder="e.g. a company you follow" required autocomplete="off"></label>
+<label>Ticker <span class="muted">(optional)</span><input name="ticker" value="{{ values.ticker }}" maxlength="15" placeholder="e.g. MSFT" autocomplete="off" autocapitalize="characters"></label>
+<details class="optional-note" {% if values.reason %}open{% endif %}><summary>Add a note (optional)</summary>
+<label>Anything else?<textarea name="reason" rows="3" maxlength="2000" placeholder="Add a question or anything you'd like us to know. You can leave this blank.">{{ values.reason }}</textarea></label></details>
+<button type="submit" {% if not enabled %}disabled{% endif %}>Submit company suggestion</button>
+<p class="small-note">Suggestions are reviewed privately and do not guarantee coverage or an investment recommendation. No email address is required. Please leave out personal financial information.</p>
+</form></section>{% endblock %}

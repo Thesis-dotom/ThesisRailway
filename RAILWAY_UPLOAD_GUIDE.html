@@ -1,0 +1,219 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Thesis 1.3 — Railway upload guide</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#172b46;background:#edf2f7;margin:0}main{max-width:1000px;padding:46px 54px;margin:30px auto;background:#fff;border:1px solid #dbe3ee;border-radius:12px}h1,h2{line-height:1.2;letter-spacing:-.025em}h1{font-size:38px}h2{font-size:26px;margin-top:50px;border-top:1px solid #dde4ee;padding-top:28px}a{color:#1c5bac}pre{background:#14263f;color:#e9f1fe;padding:18px;overflow:auto;border-radius:6px}code{font-size:.9em}table{border-collapse:collapse;display:block;overflow:auto;width:100%}td,th{padding:12px 14px;border:1px solid #d9e2ee;vertical-align:top}th{background:#edf3fa;text-align:left}li{margin-bottom:10px}p{margin:16px 0}@media(max-width:650px){main{padding:24px;margin:0;border-radius:0}h1{font-size:30px}body{font-size:16px}}@media print{body{background:white}main{border:0;margin:0;padding:0;max-width:none}h2{break-after:avoid}pre,table{break-inside:avoid}}</style></head><body><main><h1 id="upload-thesis-13-to-railway">Upload Thesis 1.3 to Railway</h1>
+<p>Prepared 28 October 2026. This guide is for the complete Flask application in this folder. The package has not been deployed to your Railway account. Your existing website remains available while you set up and check the new one.</p>
+<h2 id="1-open-the-package-and-preview">1. Open the package and preview</h2>
+<ol>
+<li>Download the ZIP and extract it. Open the extracted <code>thesis-v1-3</code> folder.</li>
+<li>Double-click <code>PREVIEW.html</code>. It opens the updated design, saved company reports, ranking views and company finder in your browser. Use <strong>Mobile view</strong> to inspect a narrow layout.</li>
+<li>The preview uses the bundled snapshot. It does not refresh data, save suggestions or sign you in. Those functions run in the deployed application.</li>
+<li>At the folder's top level, confirm you see <code>app.py</code>, <code>Dockerfile</code>, <code>requirements.lock</code>, <code>templates</code>, <code>static</code>, <code>data</code>, and <code>.github</code>.</li>
+<li>The website upload is this whole application's source, not just <code>PREVIEW.html</code> and not the ZIP itself.</li>
+</ol>
+<h2 id="2-put-this-version-in-a-new-private-github-repository">2. Put this version in a new private GitHub repository</h2>
+<p>Using a new repository called <code>ThesisRailway</code> keeps the existing deployment easy to restore and prevents an old service from deploying these changes unexpectedly.</p>
+<p>The least error-prone route is <a href="https://desktop.github.com/">GitHub Desktop</a>:</p>
+<ol>
+<li>Install GitHub Desktop and sign in to your GitHub account.</li>
+<li>Choose <strong>File → New repository</strong>. Name it <code>ThesisRailway</code>. Choose a local parent folder outside the extracted package. Leave the Git ignore and license choices at their defaults; the package supplies its own ignore rules.</li>
+<li>Click <strong>Create repository</strong>, then <strong>Repository → Show in Explorer</strong> on Windows or <strong>Show in Finder</strong> on Mac.</li>
+<li>Copy <strong>the contents</strong> of the extracted <code>thesis-v1-3</code> folder into that repository folder. Do not copy the outer folder as an extra directory layer.</li>
+<li>Include <code>.github</code>, <code>.gitignore</code>, and <code>.dockerignore</code>. On Mac, press <strong>Command–Shift–.</strong> to reveal dot-prefixed files if needed. Do not copy a local virtual environment, <code>.refresh-work</code>, <code>.env</code>, or an <code>instance</code> database. These are not included in the delivered package.</li>
+<li>In GitHub Desktop, review the changed files. In the summary box enter <code>Upload Thesis 1.3</code> and click <strong>Commit to main</strong>.</li>
+<li>Click <strong>Publish repository</strong>, keep <strong>Keep this code private</strong> checked, and publish.</li>
+<li>Open the repository on GitHub. At its top level you should see <code>app.py</code> and <code>Dockerfile</code>. Open <code>.github/workflows/weekly-refresh.yml</code> and confirm the file exists. The refresh cannot run if that folder was missed.</li>
+<li>Confirm the default branch is <code>main</code> under repository settings. The weekly schedule runs on the default branch.</li>
+</ol>
+<p>If you prefer your existing repository, back it up first, then replace its application files deliberately. Check which existing services deploy from that branch before pushing. The instructions below assume the new repository.</p>
+<h2 id="3-connect-railway-to-the-repository">3. Connect Railway to the repository</h2>
+<ol>
+<li>Open <a href="https://railway.com/">Railway</a> and sign in with GitHub.</li>
+<li>Choose a paid plan if required. As checked on the preparation date, Hobby has a <strong>$5/month minimum including $5 of resource usage</strong>, and usage above that is extra. The web service and PostgreSQL database both consume resources. This is not a fixed $5 total bill. Check current pricing and usage alerts in Railway before deploying.</li>
+<li>Click <strong>New Project → Deploy from GitHub repo</strong>.</li>
+<li>Authorize Railway's GitHub integration to access <code>ThesisRailway</code> and select that repository. If it is absent, edit the integration's repository access and refresh the list.</li>
+<li>Select <code>main</code> as the deployment branch. Name the web service <code>Thesis</code> if you want a clear label.</li>
+<li>
+<p>Railway should detect the included <code>Dockerfile</code>. Its command already starts Gunicorn correctly. Leave custom build and start commands blank. If a manual start command is needed, use exactly <code>gunicorn --config gunicorn.conf.py app:app</code>.</p>
+</li>
+<li>
+<p>Leave <strong>Root Directory</strong> blank/default, because <code>app.py</code> is at the repository root. If you uploaded an extra folder layer, fix the repository layout before continuing.</p>
+</li>
+<li>The first build may begin immediately. The research pages can start before the private suggestion storage is configured; suggestions remain unavailable until the next steps are finished.</li>
+</ol>
+<h2 id="4-add-persistent-storage-for-suggestions">4. Add persistent storage for suggestions</h2>
+<ol>
+<li>In the same Railway project, click <strong>+ New → Database → PostgreSQL</strong>.</li>
+<li>Wait for the database service to become ready. Keep its database volume attached.</li>
+<li>Open the <strong>Thesis web service</strong>, then <strong>Variables</strong>.</li>
+<li>Add a <strong>reference variable</strong> named <code>DATABASE_URL</code> pointing to the PostgreSQL service's <code>DATABASE_URL</code>. Use Railway's variable-reference picker where available.</li>
+<li>If the database service is named <code>Postgres</code>, the value is <code>${{Postgres.DATABASE_URL}}</code>. If its service name is different, choose that actual service in the picker. Do not put this reference into a Python file. It belongs in the web service's Railway Variables tab.</li>
+<li>Keep PostgreSQL private. The app connects through Railway's internal connection; it does not need a public database URL.</li>
+<li>Suggestions are stored in PostgreSQL, so redeploying the web service does not erase the inbox. The local SQLite option is for development only and is deliberately disabled in production without a database connection.</li>
+<li>Enable an appropriate database backup schedule in Railway's database/volume backup controls. A persistent volume is not a backup. Review the displayed retention and storage cost. Database backups protect submissions; GitHub stores the public research snapshots separately.</li>
+</ol>
+<p>The application creates its two small database tables on the first database-backed request. No separate migration command or manual SQL is required for this release.</p>
+<h2 id="5-add-the-web-services-remaining-variables">5. Add the web service's remaining variables</h2>
+<p>Add these to <strong>Thesis → Variables</strong>, not the database's Variables tab:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>THESIS_ENV</code></td>
+<td><code>production</code></td>
+</tr>
+<tr>
+<td><code>PORT</code></td>
+<td><code>8080</code></td>
+</tr>
+<tr>
+<td><code>WEB_CONCURRENCY</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>DATABASE_URL</code></td>
+<td>The reference configured above</td>
+</tr>
+<tr>
+<td><code>SECRET_KEY</code></td>
+<td>A newly generated random secret, at least 32 characters; use 64 random characters if convenient</td>
+</tr>
+<tr>
+<td><code>ADMIN_PASSWORD</code></td>
+<td>A unique owner password of at least 16 characters; store it in your password manager</td>
+</tr>
+</tbody>
+</table>
+<p>Use a password manager's random generator for the two secrets. Keep them different. Do not upload them to GitHub, paste them into the README, or reuse a password from another account. There are no prefilled production credentials in this package.</p>
+<p><code>SECRET_KEY</code> protects the session cookie and form tokens. <code>ADMIN_PASSWORD</code> opens the private owner inbox. If either required secret is too short, the corresponding protected functions remain unavailable. Rotating the owner password or session secret invalidates existing owner sessions.</p>
+<p>Do not enable <code>FLASK_DEBUG</code>. No financial API key is needed for the present Yahoo/yfinance integration. GitHub's public-data refresh does not need the database URL or the owner secrets.</p>
+<h2 id="6-configure-and-deploy-the-web-service">6. Configure and deploy the web service</h2>
+<ol>
+<li>In <strong>Thesis → Settings</strong>, set <strong>Healthcheck Path</strong> to <code>/health</code>.</li>
+<li>Keep the web service running continuously; leave Railway Serverless/app sleeping disabled for this setup.</li>
+<li>Keep one replica and <code>WEB_CONCURRENCY=1</code> initially. This limits memory use and unnecessary concurrent provider calls. The four Gunicorn threads can serve saved pages while another request runs.</li>
+<li>Check that GitHub autodeploys are enabled for <code>main</code>.</li>
+<li>Click <strong>Deploy</strong> to apply pending changes, or redeploy the latest commit after adding variables. Look at the deployment logs until the service is active. Normal startup mentions Gunicorn listening on <code>0.0.0.0:8080</code>.</li>
+<li>Under <strong>Settings → Networking → Public Networking</strong>, click <strong>Generate Domain</strong>. If asked for a target port, enter <code>8080</code>.</li>
+<li>Open the generated HTTPS domain. Keep this URL for testing before connecting a custom domain.</li>
+</ol>
+<p>The healthcheck confirms that the application is running. It does not prove that financial data is fresh or that the database accepts writes; those are checked separately below.</p>
+<h2 id="7-verify-the-deployed-site">7. Verify the deployed site</h2>
+<p>Replace <code>YOUR-DOMAIN</code> below with Railway's generated hostname.</p>
+<ol>
+<li>Visit <code>https://YOUR-DOMAIN/health</code>. Expect <code>status: ok</code> and <code>version: 1.3</code>.</li>
+<li>Visit <code>https://YOUR-DOMAIN/data-status</code>. Expect <code>status: ready</code>, model <code>3.0</code>, a snapshot identifier and coverage counts. If the package has sat unused for more than eight days, <code>stale</code> is expected until a new refresh succeeds.</li>
+<li>Open <strong>Top Opportunities</strong>. Check its update date, <strong>All rated companies</strong>, <strong>Screen matches</strong>, <strong>Quality watchlist</strong>, <strong>Partial data</strong>, and <strong>Unrated</strong> views. A view can legitimately be empty.</li>
+<li>Open a report and check its two scores, annual dates, peer evidence and missing-data notes. Click <strong>Sources</strong>, then return to the report; the snapshot stays consistent.</li>
+<li>Open <strong>Find a company</strong>. Choose a sector or minimum Quality score and submit. Check that results match the filters. Try a combination with no matches; the site should suggest broadening the filters.</li>
+<li>Open <strong>Suggest a company</strong>. Submit one clearly labeled test company using just its name, and note its confirmation reference. The ticker and expandable note are optional.</li>
+<li>Open <code>https://YOUR-DOMAIN/admin/login</code>. Enter the <code>ADMIN_PASSWORD</code> you set. The test submission should appear under <strong>New</strong>.</li>
+<li>Mark that submission <strong>Reviewed</strong>, and confirm it moves out of the New view and remains under All or Reviewed.</li>
+<li>Redeploy the web service once, sign in again if necessary, and confirm the same test submission still exists. This verifies your actual Railway database connection and persistence.</li>
+<li>Check the site on your phone. Keep the old hosting service until these checks and the refresh test pass.</li>
+</ol>
+<p>There is no public listing of submitted company suggestions and no email sending. Owner sessions expire after one hour. Public submissions are limited to five per network address per hour; owner login attempts are limited to five per fifteen-minute window.</p>
+<h2 id="8-activate-and-test-the-weekly-refresh">8. Activate and test the weekly refresh</h2>
+<p><strong>Hosting the website and running the weekly refresh are two separate pieces.</strong> The supplied workflow runs on GitHub, writes validated snapshots to the repository, and pushes a commit. Railway's GitHub autodeploy then builds the new snapshot into the website.</p>
+<ol>
+<li>Open the <code>ThesisRailway</code> repository on GitHub.</li>
+<li>Go to <strong>Settings → Actions → General</strong>. Enable Actions for this repository if needed. Under <strong>Workflow permissions</strong>, allow <strong>Read and write permissions</strong> if the account's policy permits it. The workflow explicitly requests <code>contents: write</code>.</li>
+<li>If branch protection blocks automation pushes, use an approved deployment branch/workflow arrangement. Do not remove unrelated protection rules blindly. A rejected push means Railway will keep the old snapshot even if the data collection itself succeeded.</li>
+<li>Open the <strong>Actions</strong> tab and choose <strong>Weekly company refresh</strong>.</li>
+<li>Click <strong>Run workflow</strong>, choose <code>main</code>, and click <strong>Run workflow</strong> again.</li>
+<li>Open the run. It installs locked dependencies, runs the tests against a disposable PostgreSQL test database, fetches the 109-company universe, validates coverage, saves diagnostics, and commits the snapshot. It does not connect to your Railway submission database.</li>
+<li>Allow time for the paced provider scan. The job has a 110-minute timeout and a 90-minute collection budget; actual runtime depends on provider responses. Do not start multiple overlapping refreshes. Complete inputs are not fetched again during the retry pass.</li>
+<li>Confirm the run succeeds, including <strong>Publish snapshot to deployment branch</strong>. A <code>published</code> diagnostic alone is not proof that the push or Railway deployment succeeded.</li>
+<li>Confirm a new <code>Refresh weekly company research</code> commit appears on <code>main</code>.</li>
+<li>In Railway, confirm that commit starts a successful deployment. If it does not, check the source branch, GitHub access and autodeploy setting; you can manually deploy the latest commit after fixing them.</li>
+<li>Reopen <code>/data-status</code>. Its snapshot identifier must match the newly committed <code>data/recommendations.json</code>, and its date should have advanced. Then check the Top Opportunities page.</li>
+</ol>
+<p>After this test, the YAML schedule requests a refresh <strong>every Sunday at 23:17 UTC</strong>. GitHub schedules can be delayed, so that is a requested start time, not an exact publication deadline. The workflow must remain on the default branch. Public repositories can have schedules disabled after 60 days of inactivity; this guide uses a private repository, but you should still monitor workflow failures and account limits.</p>
+<p>You do not need an additional Railway cron service for this design. A separate cron process writing to its own container would not update the web service's bundled files automatically.</p>
+<h2 id="9-what-a-successful-refresh-means">9. What a successful refresh means</h2>
+<p>For the 109-company universe, publication requires at least <strong>88 reports returned</strong> and <strong>66 companies with both complete scores</strong>. Peer comparisons are computed from the collected dataset before those checks. The strict investment screen is not relaxed to fill a list.</p>
+<p>The process saves reports and sanitized request diagnostics as it runs. It retries incomplete companies once after a pause, stops on an observed rate-limit response, and never merges incompatible partial attempts into a complete report. A failed validation or publication leaves the prior current snapshot intact. Historical snapshots support consistent older report links.</p>
+<p>At eight days old the app flags a snapshot as stale and <code>/data-status</code> returns HTTP 503; the rest of the site stays available. <code>/health</code> remains separate, so an upstream-data problem does not repeatedly restart an otherwise working app.</p>
+<p>Enable GitHub Actions failure notifications for your account. Check <code>/data-status</code> after weekly runs, or connect an uptime monitor to that path if you want alerts about stale data. The code supports these checks; no monitoring account or notification service has been created for you.</p>
+<h2 id="10-manage-suggested-companies">10. Manage suggested companies</h2>
+<ol>
+<li>Sign in at <code>/admin/login</code>.</li>
+<li>Review the New inbox and use <strong>Reviewed</strong>, <strong>Shortlisted</strong>, or <strong>Dismissed</strong> to keep it organized.</li>
+<li>Shortlisting does not automatically alter scores or coverage. Verify the ticker, business type and provider availability first.</li>
+<li>To add a supported company, edit <code>universe.json</code> in GitHub, adding its exact ticker inside the JSON list. Preserve commas and quotation marks and avoid duplicates.</li>
+<li>Commit the change and manually run <strong>Weekly company refresh</strong>. The company appears in the next successfully published snapshot if usable data is available, otherwise with an unrated explanation.</li>
+<li>Keep a useful comparison sample. Removing too many peers can make a company's peer-based factors unscorable.</li>
+</ol>
+<h2 id="11-fix-common-setup-problems">11. Fix common setup problems</h2>
+<table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Build cannot find requirements or <code>app.py</code></td>
+<td>Application files may be one folder too deep. Fix the repository root or correct Railway's Root Directory.</td>
+</tr>
+<tr>
+<td>Application failed to respond</td>
+<td>Check deployment logs, <code>PORT=8080</code>, target port 8080 and the included Gunicorn command.</td>
+</tr>
+<tr>
+<td>Suggestion form is unavailable</td>
+<td>Confirm the web service has <code>THESIS_ENV</code>, a long enough <code>SECRET_KEY</code>, and the Postgres <code>DATABASE_URL</code> reference; redeploy pending variables.</td>
+</tr>
+<tr>
+<td>“We could not save your suggestion”</td>
+<td>Confirm PostgreSQL is running, its volume is attached, and <code>DATABASE_URL</code> resolves to the database in the same project/environment. Do not replace it with a local filesystem path.</td>
+</tr>
+<tr>
+<td>Owner access is not configured</td>
+<td>Check <code>ADMIN_PASSWORD</code> is at least 16 characters, and the session secret and storage are configured. Redeploy.</td>
+</tr>
+<tr>
+<td>Form expired</td>
+<td>Reload the page to get a fresh form token. Use the HTTPS domain, especially in production.</td>
+</tr>
+<tr>
+<td>Data refresh failed with 429/rate limit</td>
+<td>Keep the last good snapshot. Wait before a later manual retry; avoid repeatedly hammering the provider.</td>
+</tr>
+<tr>
+<td>Coverage below 80%/60%</td>
+<td>Inspect the run summary and diagnostic artifact for failed symbols, stale statements or missing peers. Repair the cause; do not lower the checks simply to publish.</td>
+</tr>
+<tr>
+<td>Actions cannot push</td>
+<td>Check write permissions and branch protection. Data fetched in a failed run is not yet deployed.</td>
+</tr>
+<tr>
+<td>New commit exists but website date did not change</td>
+<td>Check Railway's deployed commit, connected branch and autodeploy status, then <code>/data-status</code>.</td>
+</tr>
+<tr>
+<td>No strict screen matches</td>
+<td>This is permitted. Use All rated companies, Quality watchlist and the finder. The app does not invent qualifying companies.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-finish-the-move">12. Finish the move</h2>
+<p>Once the domain, submission persistence and refresh deployment all pass, optionally add your custom domain under Railway's Networking settings and follow the exact DNS records Railway provides. Keep the old service available until the new domain is verified. You can then decide whether to stop the old hosting subscription.</p>
+<p>For a code rollback, redeploy a known-good commit in Railway. That does not roll back the PostgreSQL inbox. Restore database content only from a deliberately chosen backup; do not delete the database service to roll back application code.</p>
+<h2 id="official-references-checked">Official references checked</h2>
+<ul>
+<li><a href="https://docs.railway.com/guides/flask">Deploy Flask on Railway</a></li>
+<li><a href="https://docs.railway.com/databases/postgresql">Railway PostgreSQL</a></li>
+<li><a href="https://docs.railway.com/variables">Variables and references</a></li>
+<li><a href="https://docs.railway.com/deployments/deployment-actions">Reference variables and deployment order</a></li>
+<li><a href="https://docs.railway.com/deployments/github-autodeploys">GitHub autodeploys</a></li>
+<li><a href="https://docs.railway.com/deployments/healthchecks">Railway healthchecks</a></li>
+<li><a href="https://docs.railway.com/pricing">Railway pricing</a></li>
+<li><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule">GitHub scheduled workflow behavior</a></li>
+<li><a href="https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow">Run a workflow manually</a></li>
+</ul>
+<p>Railway and GitHub may adjust interface labels after this guide's preparation date. The architecture and the included application settings above are specific to this package.</p></main></body></html>
