@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 from scoring import MODEL_VERSION, age_days
+from company_lookup import resolve_company
 
 DATA_DIR = Path(os.getenv('THESIS_DATA_DIR', Path(__file__).parent / 'data'))
 VIEWS = {'all','screen','watchlist','partial','excluded'}
@@ -33,8 +34,8 @@ def saved_report(query, version=None):
     snapshot = load_snapshot(version)
     if not snapshot:
         return None
-    key = query.strip().casefold()
-    report = next((r for r in snapshot['reports'].values() if key in (r['symbol'].casefold(),r['name'].casefold())),None)
+    symbol = resolve_company(query, snapshot['reports'].values())
+    report = snapshot['reports'].get(symbol)
     if report:
         report = copy.deepcopy(report)
         report['snapshot_id'] = snapshot['id']

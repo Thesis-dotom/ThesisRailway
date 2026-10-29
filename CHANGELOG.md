@@ -1,3 +1,12 @@
+# v1.3.1 search repair — October 29, 2026
+
+- Match saved reports by ticker, normalized company name, and familiar aliases before requesting live data.
+- Bundle a public SEC company directory for name resolution and autocomplete; update it during the weekly workflow while preserving the previous file on failed or incomplete downloads. Company identities do not expand the scored research universe.
+- Use yfinance's search session for remaining live lookups instead of the plain HTTP endpoint that returned rate-limit errors.
+- Stop live report collection after 30 seconds; limit concurrent collection to one child per web worker and cache reports by ticker.
+- Show useful errors next to the search field, reject stale autocomplete responses, support ticker selection by keyboard, and restore the Research button after back navigation.
+- No new hosting environment variables, database migration, dependency upgrade, or paid data account required. Deploy the latest main commit on Render; `/health` reports version `1.3.1`.
+
 # v1.3 form simplification — October 28, 2026
 
 - Require only the company name for visitor suggestions.

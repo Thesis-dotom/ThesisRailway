@@ -34,6 +34,7 @@ Open the local URL printed by Flask (normally `http://127.0.0.1:5000`). Local de
 ```bash
 python -m pip install pytest beautifulsoup4
 python -m pytest -q
+node --test tests/test_search_ui.cjs
 python refresh_recommendations.py
 python validate_model.py
 python export_preview.py
@@ -42,6 +43,8 @@ python export_preview.py
 A manual refresh makes external provider requests and may take substantial time. Do not run overlapping scans. `validate_model.py` and `export_preview.py` use saved data; the preview export does not read the private inbox.
 
 For PostgreSQL integration tests, set `DATABASE_TEST_URL` to a **disposable database named `thesis_test`**. The tests reset its tables. Never point that variable at a real inbox. The supplied GitHub Actions workflow creates and tests a temporary PostgreSQL service automatically.
+
+Company search uses the bundled SEC name/ticker directory before contacting Yahoo. The weekly workflow refreshes this directory with `python refresh_company_directory.py`; a failed or incomplete directory download preserves the prior file. Directory entries only identify companies and do not add them to the scored research universe. Reports outside the saved universe still depend on Yahoo availability. Live report collection stops after 30 seconds, with one live collection per web worker to bound memory use. Node.js is needed only for the JavaScript regression tests, not for hosting.
 
 ## Files
 

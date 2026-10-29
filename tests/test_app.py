@@ -42,6 +42,7 @@ def test_static_routes():
 
 def test_company_report(monkeypatch):
     monkeypatch.setattr(thesis.yf, "Ticker", FakeTicker)
+    monkeypatch.setattr(thesis, "build_live_report", thesis.build_report)
     thesis.REPORT_CACHE.clear()
     client = thesis.app.test_client()
     response = client.get("/search?q=AAPL")
@@ -57,12 +58,6 @@ def test_top_opportunity_name_mapping():
 
 
 def test_company_word_not_forced_to_ticker(monkeypatch):
-    class FakeResponse:
-        def raise_for_status(self):
-            return None
-        def json(self):
-            return {"quotes": [{"symbol": "AAPL", "quoteType": "EQUITY", "longname": "Apple Inc."}]}
-
-    monkeypatch.setattr(thesis.requests, "get", lambda *args, **kwargs: FakeResponse())
+    monkeypatch.setattr(thesis, "provider_search", lambda *_: (_ for _ in ()).throw(AssertionError("Apple should resolve locally")))
     symbol, _ = thesis.lookup_symbol("Apple")
     assert symbol == "AAPL"

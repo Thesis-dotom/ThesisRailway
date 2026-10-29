@@ -8,12 +8,16 @@ import time
 import secrets
 import hmac
 import hashlib
-import requests
+import re
+import tempfile
+import threading
+from pathlib import Path
 import pandas as pd
 import yfinance as yf
 from flask import Flask, render_template, request, jsonify
 from scoring import evaluate, utcnow, QUALITY, OPPORTUNITY
 from recommendations import load_snapshot, saved_report, page_data, is_stale
+from company_lookup import company_catalog, matching_companies, resolve_company
 from financials import extract_annual
 from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.security import generate_password_hash
@@ -37,65 +41,20 @@ if production:
     app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 app.register_blueprint(submissions_bp)
 
-APP_VERSION = "1.3"
+APP_VERSION = "1.3.1"
 LAST_REVIEWED = "October 28, 2026"
 REPORT_CACHE_TTL_SECONDS = 300
 REPORT_CACHE: dict[str, tuple[float, dict]] = {}
 SUGGESTION_CACHE: dict[str, tuple[float, list[dict]]] = {}
 
 
-COMPANY_ALIASES = [
-    {
-        "ticker": "MOD",
-        "name": "Modine Manufacturing",
-        "category": "Data center cooling",
-    },
-    {
-        "ticker": "IESC",
-        "name": "IES Holdings",
-        "category": "Electrical infrastructure",
-    },
-    {
-        "ticker": "ACLS",
-        "name": "Axcelis Technologies",
-        "category": "Semiconductor equipment",
-    },
-    {
-        "ticker": "POWL",
-        "name": "Powell Industries",
-        "category": "Power grid equipment",
-    },
-    {
-        "ticker": "ONTO",
-        "name": "Onto Innovation",
-        "category": "Semiconductor inspection",
-    },
-    {
-        "ticker": "NVMI",
-        "name": "Nova Ltd.",
-        "category": "Semiconductor metrology",
-    },
-    {
-        "ticker": "AMKR",
-        "name": "Amkor Technology",
-        "category": "Advanced chip packaging",
-    },
-    {
-        "ticker": "TMDX",
-        "name": "TransMedics Group",
-        "category": "Medical technology",
-    },
-    {
-        "ticker": "MYRG",
-        "name": "MYR Group",
-        "category": "Electrical construction",
-    },
-    {
-        "ticker": "FLR",
-        "name": "Fluor",
-        "category": "Engineering and construction",
-    },
-]
+LIVE_REPORT_TIMEOUT_SECONDS = 30
+LIVE_REPORT_SLOTS = threading.BoundedSemaphore(1)
+MAX_QUERY_LENGTH = 100
+
+
+class SearchUnavailable(Exception):
+    """The provider could not complete the request within the search budget."""
 
 
 def clean_number(value: Any) -> Optional[float]:
@@ -123,69 +82,13 @@ def growth_rate(latest: Optional[float], previous: Optional[float]) -> Optional[
     return (latest - previous) / abs(previous)
 
 
-def normalize_company_name(value: str) -> str:
-    cleaned = value.lower().strip()
-    cleaned = cleaned.replace("&", "and")
-    cleaned = cleaned.replace(".", "")
-    cleaned = cleaned.replace(",", "")
-    cleaned = cleaned.replace("'", "")
-    cleaned = cleaned.replace("’", "")
-    cleaned = cleaned.replace("-", " ")
-    cleaned = " ".join(cleaned.split())
-
-    endings = [
-        " corporation", " corp", " incorporated", " inc",
-        " company", " co", " ltd", " limited", " plc",
-        " group", " holdings", " holding", " technologies", " technology",
-    ]
-
-    changed = True
-    while changed:
-        changed = False
-        for ending in endings:
-            if cleaned.endswith(ending):
-                cleaned = cleaned[: -len(ending)].strip()
-                changed = True
-    return cleaned
+def known_companies(version=None):
+    snapshot = load_snapshot(version)
+    return company_catalog((snapshot or {}).get("reports", {}).values())
 
 
-def top_opportunity_aliases() -> dict:
-    aliases = {}
-    custom_aliases = {
-        "MOD": ["Modine", "Modine Manufacturing", "Modine Manufacturing Company", "Modine Manufacturing Co"],
-        "IESC": ["IES", "IES Holdings", "IES Holdings Inc"],
-        "ACLS": ["Axcelis", "Axcelis Technologies", "Axcelis Technologies Inc"],
-        "POWL": ["Powell", "Powell Industries", "Powell Industries Inc"],
-        "ONTO": ["Onto", "Onto Innovation", "Onto Innovation Inc"],
-        "NVMI": ["Nova", "Nova Ltd", "Nova Ltd."],
-        "AMKR": ["Amkor", "Amkor Technology", "Amkor Technology Inc"],
-        "TMDX": ["TransMedics", "TransMedics Group", "TransMedics Group Inc"],
-        "MYRG": ["MYR", "MYR Group", "MYR Group Inc"],
-        "FLR": ["Fluor", "Fluor Corporation", "Fluor Corp"],
-    }
-
-    for item in COMPANY_ALIASES:
-        ticker = item["ticker"].upper()
-        possible_names = {item["name"]}
-        possible_names.update(custom_aliases.get(ticker, []))
-
-        for possible in possible_names:
-            aliases[normalize_company_name(possible)] = ticker
-
-    return aliases
-
-
-def resolve_known_company(query: str) -> str | None:
-    q = query.strip()
-    if not q:
-        return None
-
-    q_upper = q.upper()
-    for item in COMPANY_ALIASES:
-        if q_upper == item["ticker"].upper():
-            return item["ticker"].upper()
-
-    return top_opportunity_aliases().get(normalize_company_name(q))
+def resolve_known_company(query: str, version=None) -> str | None:
+    return resolve_company(query, known_companies(version), allow_prefix=True)
 
 
 def get_info(ticker: yf.Ticker) -> dict:
@@ -229,106 +132,68 @@ def get_cached_suggestions(query: str) -> list[dict]:
         return cached[1]
 
     suggestions = lookup_company_suggestions(query)
+    if len(SUGGESTION_CACHE) >= 256:
+        SUGGESTION_CACHE.pop(next(iter(SUGGESTION_CACHE)))
     SUGGESTION_CACHE[key] = (now, suggestions)
     return suggestions
 
 
+def provider_search(query):
+    # yfinance uses Yahoo's cookie/consent handling and supported HTTP session.
+    # Plain requests.get against this endpoint was returning HTTP 429.
+    result = yf.Search(query, max_results=8, news_count=0, lists_count=0,
+                       include_cb=False, recommended=0, timeout=4)
+    return [item for item in result.quotes
+            if item.get("symbol") and item.get("quoteType") in {"EQUITY", "ETF"}]
+
+
 def lookup_company_suggestions(query: str) -> list[dict]:
     q = query.strip()
+    if not q or len(q) > MAX_QUERY_LENGTH:
+        return []
+    local = matching_companies(q, known_companies())
+    if local:
+        return local
     if len(q) < 2:
         return []
-
-    results = []
-    seen = set()
-
-    def add_result(name, symbol=None):
-        if not name:
-            return
-        clean_name = str(name).strip()
-        key = clean_name.lower()
-        if key in seen:
-            return
-        seen.add(key)
-        results.append({"name": clean_name, "symbol": symbol or ""})
-
-    for item in COMPANY_ALIASES:
-        name = item["name"]
-        ticker = item["ticker"]
-        normalized_name = normalize_company_name(name)
-        normalized_q = normalize_company_name(q)
-        if normalized_name.startswith(normalized_q) or normalized_q in normalized_name:
-            add_result(name, ticker)
-
-    url = "https://query2.finance.yahoo.com/v1/finance/search"
-    params = {"q": q, "quotesCount": 10, "newsCount": 0}
-    headers = {"User-Agent": "Mozilla/5.0"}
-
     try:
-        resp = requests.get(url, params=params, headers=headers, timeout=6)
-        resp.raise_for_status()
-        data = resp.json()
-        quotes = data.get("quotes", [])
-
-        for item in quotes:
-            if item.get("quoteType") not in {"EQUITY", "ETF"}:
-                continue
-            name = item.get("longname") or item.get("shortname")
-            if name and name.lower().startswith(q.lower()):
-                add_result(name, item.get("symbol"))
-
-        for item in quotes:
-            if len(results) >= 8:
-                break
-            if item.get("quoteType") not in {"EQUITY", "ETF"}:
-                continue
-            name = item.get("longname") or item.get("shortname")
-            if name and q.lower() in name.lower():
-                add_result(name, item.get("symbol"))
+        quotes = provider_search(q)
     except Exception:
-        pass
-
+        return []
+    results, seen = [], set()
+    for item in quotes:
+        symbol = item["symbol"].upper()
+        if symbol not in seen:
+            results.append({"name": item.get("longname") or item.get("shortname") or symbol,
+                            "symbol": symbol})
+            seen.add(symbol)
     return results[:8]
 
 
 def lookup_symbol(query: str) -> tuple[str, Optional[str]]:
     q = query.strip()
-    if not q:
-        raise ValueError("Enter a company name or ticker.")
-
+    if not q or len(q) > MAX_QUERY_LENGTH:
+        raise ValueError("Enter a company name or ticker using 100 characters or fewer.")
     known_symbol = resolve_known_company(q)
     if known_symbol:
-        matching_name = next(
-            (item["name"] for item in COMPANY_ALIASES if item["ticker"].upper() == known_symbol),
-            None,
-        )
-        return known_symbol, matching_name
-
-    # Treat short ALL-CAPS inputs as tickers. Mixed-case words such as "Apple"
-    # are resolved as company names instead of becoming the invalid ticker APPLE.
-    is_probable_ticker = (
-        " " not in q
-        and len(q) <= 6
-        and q.upper() == q
-        and q.replace(".", "").replace("-", "").isalnum()
-    )
-    if is_probable_ticker:
-        return q.upper(), None
-
-    url = "https://query2.finance.yahoo.com/v1/finance/search"
-    params = {"q": q, "quotesCount": 8, "newsCount": 0}
-    headers = {"User-Agent": "Mozilla/5.0"}
-
+        return known_symbol, None
+    ticker = q.lstrip("$").upper()
+    is_ticker = bool(re.fullmatch(r"[A-Z][A-Z0-9]{0,5}(?:[.-][A-Z0-9]{1,3})?", ticker))
+    if is_ticker and q.lstrip("$") == ticker:
+        return ticker, None
     try:
-        resp = requests.get(url, params=params, headers=headers, timeout=8)
-        resp.raise_for_status()
-        data = resp.json()
-        for item in data.get("quotes", []):
-            if item.get("symbol") and item.get("quoteType") in {"EQUITY", "ETF"}:
-                return item["symbol"].upper(), item.get("shortname") or item.get("longname")
-    except Exception:
-        pass
-
-    return q.upper(), None
+        quotes = provider_search(q)
+    except Exception as exc:
+        # Lowercase tickers can still be fetched directly when name lookup fails.
+        if is_ticker and q == q.lower():
+            return ticker, None
+        raise SearchUnavailable("Company lookup is temporarily unavailable. Try the stock ticker, or open a saved report from Top Opportunities.") from exc
+    if quotes:
+        item = quotes[0]
+        return item["symbol"].upper(), item.get("longname") or item.get("shortname")
+    if is_ticker and q == q.lower():
+        return ticker, None
+    raise ValueError("No matching company was found. Check the spelling or enter its stock ticker.")
 
 
 def build_source_links(symbol: str, name: str, website: str | None = None) -> list[dict]:
@@ -370,18 +235,43 @@ def build_source_links(symbol: str, name: str, website: str | None = None) -> li
 
 
 def get_cached_report(query: str) -> dict:
-    snapshot_report = saved_report(resolve_known_company(query) or query)
+    snapshot_report = saved_report(query)
     if snapshot_report:
         return snapshot_report
-    key = query.strip().upper()
+    key, _ = lookup_symbol(query)
+    # A remote name lookup may resolve to a company we already have saved.
+    snapshot_report = saved_report(key)
+    if snapshot_report:
+        return snapshot_report
     now = time.time()
     cached = REPORT_CACHE.get(key)
     if cached and now - cached[0] < REPORT_CACHE_TTL_SECONDS:
         return cached[1]
 
-    report = build_report(query)
-    REPORT_CACHE[key] = (now, report)
+    report = build_live_report(key)
+    if len(REPORT_CACHE) >= 128:
+        REPORT_CACHE.pop(next(iter(REPORT_CACHE)))
+    REPORT_CACHE[key] = (time.time(), report)
     return report
+
+
+def build_live_report(symbol: str) -> dict:
+    # Isolate provider calls so slow calls can be stopped instead of occupying
+    # the web worker indefinitely. One child per worker also bounds memory use.
+    from refresh_recommendations import fetch_company
+    if not LIVE_REPORT_SLOTS.acquire(blocking=False):
+        raise SearchUnavailable("Another live report is loading. Please try again shortly, or open a saved report from Top Opportunities.")
+    try:
+        with tempfile.TemporaryDirectory(prefix="thesis-search-") as directory:
+            result = fetch_company(symbol, LIVE_REPORT_TIMEOUT_SECONDS,
+                                   Path(directory) / "report.json", 0)
+        if result.get("report"):
+            return result["report"]
+        app.logger.warning("Live report unavailable: symbol=%s error=%s rate_limited=%s",
+                           symbol, result.get("error_type"), result.get("rate_limited", False))
+        raise SearchUnavailable("Live market data could not be loaded for this company. Please try again shortly. Saved reports in Top Opportunities are still available.")
+    finally:
+        LIVE_REPORT_SLOTS.release()
 
 
 def build_report(query: str) -> dict:
@@ -601,7 +491,7 @@ def discover():
 @app.route("/api/suggest")
 def suggest():
     query = request.args.get("q", "")
-    if len(query.strip()) < 2:
+    if not query.strip() or len(query.strip()) > MAX_QUERY_LENGTH:
         return jsonify([])
     return jsonify(get_cached_suggestions(query))
 
@@ -661,18 +551,25 @@ def search():
     query = request.args.get("q", "").strip()
     if not query:
         return render_template("index.html", report=None, error="Enter a company name or ticker.", query=query)
+    if len(query) > MAX_QUERY_LENGTH:
+        return render_template("index.html", report=None, error="Use 100 characters or fewer for your search.", query=query[:MAX_QUERY_LENGTH]), 400
 
     try:
         version = request.args.get("snapshot")
         if version:
-            report = saved_report(resolve_known_company(query) or query, version)
+            report = saved_report(resolve_known_company(query, version) or query, version)
             if not report:
                 return "Report snapshot unavailable. Open /top-opportunities to restart.", 410
         else:
             report = get_cached_report(query)
         return render_template("index.html", report=report, error=None, query=query)
-    except Exception as exc:
-        return render_template("index.html", report=None, error="Market data is unavailable. Please try again later.", query=query)
+    except SearchUnavailable as exc:
+        return render_template("index.html", report=None, error=str(exc), query=query), 503
+    except ValueError as exc:
+        return render_template("index.html", report=None, error=str(exc), query=query), 400
+    except Exception:
+        app.logger.exception("Company search failed")
+        return render_template("index.html", report=None, error="This report could not be loaded. Try another company or open a saved report from Top Opportunities.", query=query), 503
 
 
 @app.route("/how-to-invest")

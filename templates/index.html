@@ -22,15 +22,18 @@
 
         <form class="search-box autocomplete-form" action="/search" method="get">
           <div class="autocomplete-wrap">
-            <input id="company-search" name="q" aria-label="Search by company name or ticker" value="{{ query }}" autocomplete="off" placeholder="Try Apple, Nvidia, Microsoft, Tesla, GM..." />
+            <input id="company-search" name="q" aria-label="Search by company name or ticker" aria-controls="suggestions" aria-autocomplete="list" aria-expanded="false" role="combobox" value="{{ query }}" maxlength="100" autocomplete="off" placeholder="Try Microsoft, Modine, Apple, Nvidia..." />
             <div id="suggestions" class="suggestions-panel" role="listbox" aria-label="Company suggestions" hidden></div>
           </div>
           <button type="submit">Research</button>
         </form>
-
+        <p id="search-status" class="small-note" role="status" hidden>Loading research. Live reports may take about 30 seconds.</p>
         <p class="small-note">
-          Search by company name or ticker. Select a suggestion for the most reliable match.
+          Search by company name or ticker. Saved reports load immediately; other companies use live data.
         </p>
+        {% if error %}
+          <div class="alert" role="alert">{{ error }}<p><a href="/top-opportunities">Browse saved reports</a> · <a href="/suggest-company">Suggest a company</a></p></div>
+        {% endif %}
       </div>
 
       <aside class="side-card">
@@ -84,9 +87,6 @@
 
     {% endif %}
     <section id="reports" class="container">
-      {% if error %}
-        <div class="alert">{{ error }}</div>
-      {% endif %}
 
       {% if report %}
         <article class="report">
@@ -339,114 +339,7 @@
     </div>
   </footer>
 
-  <script>
-    const searchInput = document.getElementById("company-search");
-    const suggestionsPanel = document.getElementById("suggestions");
-
-    let activeSuggestion = -1;
-    let currentSuggestions = [];
-
-    function hideSuggestions() {
-      suggestionsPanel.hidden = true;
-      suggestionsPanel.innerHTML = "";
-      activeSuggestion = -1;
-      currentSuggestions = [];
-    }
-
-    function renderSuggestions(items) {
-      currentSuggestions = items || [];
-      activeSuggestion = -1;
-
-      if (!currentSuggestions.length) {
-        hideSuggestions();
-        return;
-      }
-
-      suggestionsPanel.innerHTML = "";
-      currentSuggestions.forEach((item, index) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "suggestion-item";
-        button.textContent = item.name;
-        button.addEventListener("click", () => {
-          // Show company names in autocomplete, but search by ticker when available.
-          // This prevents name-search mismatches like Modine Manufacturing returning the wrong company.
-          const query = item.symbol || item.name;
-          searchInput.value = item.name;
-          hideSuggestions();
-          window.location.href = `/search?q=${encodeURIComponent(query)}`;
-        });
-        suggestionsPanel.appendChild(button);
-      });
-
-      suggestionsPanel.hidden = false;
-    }
-
-    let suggestionTimer = null;
-
-    if (searchInput && suggestionsPanel) {
-      const searchForm = searchInput.form;
-      const searchButton = searchForm.querySelector("button[type='submit']");
-
-      searchForm.addEventListener("submit", () => {
-        searchButton.disabled = true;
-        searchButton.textContent = "Researching…";
-      });
-      searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim();
-
-        clearTimeout(suggestionTimer);
-
-        if (query.length < 2) {
-          hideSuggestions();
-          return;
-        }
-
-        suggestionTimer = setTimeout(async () => {
-          try {
-            const response = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`);
-            const data = await response.json();
-            renderSuggestions(data);
-          } catch (error) {
-            hideSuggestions();
-          }
-        }, 180);
-      });
-
-      searchInput.addEventListener("keydown", (event) => {
-        const buttons = Array.from(suggestionsPanel.querySelectorAll(".suggestion-item"));
-
-        if (suggestionsPanel.hidden || !buttons.length) {
-          return;
-        }
-
-        if (event.key === "ArrowDown") {
-          event.preventDefault();
-          activeSuggestion = (activeSuggestion + 1) % buttons.length;
-        } else if (event.key === "ArrowUp") {
-          event.preventDefault();
-          activeSuggestion = (activeSuggestion - 1 + buttons.length) % buttons.length;
-        } else if (event.key === "Enter" && activeSuggestion >= 0) {
-          event.preventDefault();
-          buttons[activeSuggestion].click();
-          return;
-        } else if (event.key === "Escape") {
-          hideSuggestions();
-          return;
-        }
-
-        buttons.forEach((button, index) => {
-          button.classList.toggle("active", index === activeSuggestion);
-        });
-      });
-
-      document.addEventListener("click", (event) => {
-        if (!searchInput.contains(event.target) && !suggestionsPanel.contains(event.target)) {
-          hideSuggestions();
-        }
-      });
-    }
-  </script>
+  <script src="{{ url_for('static', filename='search.js') }}" defer></script>
 
 </body>
 </html>
